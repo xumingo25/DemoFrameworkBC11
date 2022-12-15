@@ -140,6 +140,10 @@ public class BaseClass {
         select.selectByVisibleText(texto);
     }
 
+    public void cerrarBrowser(){
+        this.driver.quit();
+    }
+
 }
 
 

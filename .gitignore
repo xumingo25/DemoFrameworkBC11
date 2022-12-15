@@ -37,6 +37,7 @@ build/
 
 ### IntelliJ ###
 .idea/
+.idea/workspace.xml
 
 ### Mac OS ###
 .DS_Store
