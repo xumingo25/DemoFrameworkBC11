@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseClass {
@@ -18,6 +19,16 @@ public class BaseClass {
     protected JavascriptExecutor js;
 
     protected WebDriverWait wait;
+
+    protected Select select;
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(WebDriver driver) {
+        this.driver = driver;
+    }
 
     //Métodos
     public BaseClass(WebDriver driver) {
@@ -97,12 +108,12 @@ public class BaseClass {
     }
 
     //obtenerTexto
-    public void obtenerTexto(WebElement elemento){
-        elemento.getText();
+    public String obtenerTexto(WebElement elemento){
+        return elemento.getText();
     }
 
-    public void obtenerTexto(By localizador){
-        this.driver.findElement(localizador).getText();
+    public String obtenerTexto(By localizador){
+        return this.driver.findElement(localizador).getText();
     }
 
     //Submit
@@ -122,6 +133,11 @@ public class BaseClass {
     //Maximizar la pagina
     public void maximizarBrowser(){
         driver.manage().window().maximize();
+    }
+
+    public void seleccionarDDlPorTexto(WebElement elemento,String texto){ //Febrero
+        select = new Select(elemento);
+        select.selectByVisibleText(texto);
     }
 
 }
