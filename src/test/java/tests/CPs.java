@@ -13,7 +13,7 @@ public class CPs {
     private HomePage homePage;
     private RegisterPage registerPage;
     private WebDriver driver;
-    private String browser = "CHROME";
+    private String browser = "CHROME"; //Este valor eventualmente se vera modificado
     private String propertyDriver = "webdriver.chrome.driver";
     private String urlDriver = System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\chromedriver.exe";
     private String url = "https://www.spotify.com/";
@@ -32,7 +32,14 @@ public class CPs {
     public void CP001_Registro_Fallido_Captcha_en_blanco(){
         homePage.irARegistrarte();
         registerPage.completarFormularioRegistro("domingo.saavedra@tsoftglobal.com", "domingo.saavedra@tsoftglobal.com", "123454321", "Pobre Domingo", "31", "Abril", "1990");
-        Assert.assertEquals(registerPage.obtenerErrorCaptchaVacio(),"Confirma que no eres un robot.");
+        Assert.assertEquals("Confirma que no eres un robot.",registerPage.obtenerErrorCaptchaVacio());
+    }
+
+    @Test
+    public void CP002_Registro_Fallido_Password_Corta(){
+        homePage.irARegistrarte();
+        registerPage.completarFormularioRegistro("", "", "1", "", "", "Mayo", "");
+        Assert.assertEquals("Tu contraseña es demasiado corta.",registerPage.obtenerErrorPasswordCorta());
     }
 
     @AfterMethod
