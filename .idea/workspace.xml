@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CPs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CPs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,24 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CPs.CP002_Registro_Fallido_Password_Corta">
+  <component name="RunManager" selected="TestNG.CPs">
+    <configuration name="CPs" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBootCamp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CPs" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CPs.CP001_Registro_Fallido_Captcha_en_blanco" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBootCamp" />
       <extension name="coverage">
@@ -87,6 +105,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CPs" />
         <item itemvalue="TestNG.CPs.CP002_Registro_Fallido_Password_Corta" />
         <item itemvalue="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco" />
       </list>
@@ -153,6 +172,11 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/DataDriven.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
