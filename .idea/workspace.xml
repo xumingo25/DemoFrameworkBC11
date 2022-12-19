@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se crea V1 de clase Base.">
+    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CPs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CPs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +38,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/domingo.saavedra/Downloads/DemoFrameworkBootCamp/src/test/resources"
+    "last_opened_file_path": "C:/Users/domingo.saavedra/Downloads/DemoFrameworkBootCamp/src/test/resources/data"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources\data" />
+      <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\java\utils" />
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
