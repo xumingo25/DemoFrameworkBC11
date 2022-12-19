@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.RegisterPage;
 import utils.DataDriven;
+import utils.PropertiesDriven;
 
 import java.util.ArrayList;
 
@@ -16,10 +17,10 @@ public class CPs {
     private HomePage homePage;
     private RegisterPage registerPage;
     private WebDriver driver;
-    private String browser = "CHROME"; //Este valor eventualmente se vera modificado
-    private String propertyDriver = "webdriver.chrome.driver";
-    private String urlDriver = System.getProperty("user.dir")+"\\src\\test\\resources\\drivers\\chromedriver.exe";
-    private String url = "https://www.spotify.com/";
+    private String browser = PropertiesDriven.getProperty("browser"); //Este valor eventualmente se vera modificado
+    private String propertyDriver = PropertiesDriven.getProperty("propertyDriver");
+    private String urlDriver = PropertiesDriven.getProperty("urlDriver");
+    private String url = PropertiesDriven.getProperty("url");
 
     private ArrayList<String> data; //null
 
@@ -36,7 +37,7 @@ public class CPs {
 
     @Test
     public void CP001_Registro_Fallido_Captcha_en_blanco(){
-        data = DataDriven.getData("CP001_Registro_Fallido_Captcha_en_blanco");
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP001"));
         homePage.irARegistrarte();
         registerPage.completarFormularioRegistro(
                 data.get(1), data.get(2), data.get(3), data.get(4), data.get(5), data.get(6), data.get(7));
@@ -45,7 +46,7 @@ public class CPs {
 
     @Test
     public void CP002_Registro_Fallido_Password_Corta(){
-        data = DataDriven.getData("CP002_Registro_Fallido_Password_Corta");
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP002"));
         homePage.irARegistrarte();
         registerPage.completarFormularioRegistro
                 (data.get(1), data.get(2), data.get(3), data.get(4), data.get(5), data.get(6), data.get(7));
