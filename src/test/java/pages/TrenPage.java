@@ -46,9 +46,19 @@ public class TrenPage extends BaseClass {
         esperarXSegundos(1000);
         click(locatorAumentarViajeros);
         esperarXSegundos(1000);
-        click(esperarAElementoWeb(locatorBtnBuscar));
+       // click(esperarAElementoWeb(locatorBtnBuscar));
         esperarXSegundos(3000);
 
+    }
+
+    public String getUrl1(){
+        String url1 = driver.getCurrentUrl();
+        return url1;
+    }
+
+    public String getUrl2(){
+        String url2 = driver.getCurrentUrl();
+        return url2;
     }
 
 

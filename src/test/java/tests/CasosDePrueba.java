@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -41,7 +42,10 @@ public class CasosDePrueba {
     public void CP007_BusquedaTrenes_IdaVuelta() {
         homePage.aceptarCookies();
         homePage.irATrenes();
+        String url1= trenPage.getUrl1();
         trenPage.completarBusqueda("Madrid", "Barcelona");
+        String url2= trenPage.getUrl2();
+        Assert.assertEquals(url1, url2);
 
 
     }
