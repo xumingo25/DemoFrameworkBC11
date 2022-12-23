@@ -11,7 +11,7 @@ import utils.PropertiesDriven;
 
 import java.util.ArrayList;
 
-public class CasosDePrueba {
+public class CasosDePruebaTrenes {
     private HomePage homePage;
     private TrenPage trenPage;
     private WebDriver driver;

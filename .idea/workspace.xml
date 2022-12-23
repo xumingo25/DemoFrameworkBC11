@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se añade caso de prueba CP007_BusquedaTrenes_IdaVuelta, drivers, HomePage y TrenPage">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasosDePrueba.CP007_BusquedaTrenes_IdaVuelta">
+  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BC11" />
       <method v="2">
@@ -61,7 +62,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePrueba.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -70,7 +71,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
       <option name="METHOD_NAME" value="CP007_BusquedaTrenes_IdaVuelta" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -79,7 +80,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePrueba.PruebaHoteles" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.PruebaHoteles" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -88,7 +89,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
       <option name="METHOD_NAME" value="PruebaHoteles" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -97,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePrueba.PruebaViajes" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.PruebaViajes" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -106,7 +107,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
       <option name="METHOD_NAME" value="PruebaViajes" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -115,7 +116,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePrueba.PruebasTrenHotel" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.PruebasTrenHotel" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -124,7 +125,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
       <option name="METHOD_NAME" value="PruebasTrenHotel" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -133,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePrueba.PruebasVueloHotel" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.PruebasVueloHotel" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -142,7 +143,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
       <option name="METHOD_NAME" value="PruebasVueloHotel" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -153,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CasosDePrueba.CP007_BusquedaTrenes_IdaVuelta" />
-        <item itemvalue="TestNG.CasosDePrueba.PruebasTrenHotel" />
-        <item itemvalue="TestNG.CasosDePrueba.PruebaViajes" />
-        <item itemvalue="TestNG.CasosDePrueba.PruebasVueloHotel" />
-        <item itemvalue="TestNG.CasosDePrueba.PruebaHoteles" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebasTrenHotel" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebaViajes" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebasVueloHotel" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebaHoteles" />
       </list>
     </recent_temporary>
   </component>
