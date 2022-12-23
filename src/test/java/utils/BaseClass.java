@@ -43,6 +43,7 @@ public class BaseClass {
 
     public void cargarPagina(String url){
         this.driver.get(url);
+        System.out.println("Test");
     }
 
     //Conectar el driver al browser
