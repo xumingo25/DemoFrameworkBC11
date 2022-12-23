@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se crea V1 de clase Base.">
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+=======
+    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Testeando el push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> f59976cf94b5b3b9a29d1d6ac24345f3a13d6f44
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +24,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/BC11G3" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="BC11G3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,19 +61,6 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BC11" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BC11" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CPs" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BC11" />
       <extension name="coverage">
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671120045211</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Testeando el push">
+      <created>1671826388337</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671826388337</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,7 +177,8 @@
     <MESSAGE value="Se sube a repo estructura base del proyecto" />
     <MESSAGE value="Se actualiza pom. Se agrega dependencia de Selenium V 3.141.59" />
     <MESSAGE value="Se crea V1 de clase Base." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se crea V1 de clase Base." />
+    <MESSAGE value="Testeando el push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testeando el push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
