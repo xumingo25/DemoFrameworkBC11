@@ -9,6 +9,9 @@ public class HomePage extends BaseClass {
         super(driver);
     }
 
+    By locatorBtnHoteles = By.xpath(("//a[contains(text(), 'Hoteles')]")); //locator del boton Hoteles
+    By LocatorCookies = By.xpath(("//button[contains(text(),'Rechazar')]")); //locator del boton rechazar cookies
+
     By locatorBtnLogin = By.xpath("//button/p" );
     By locatorInputEmailLogin = By.name("email");
     By locatorInputPasswordLogin = By.name("password");
@@ -21,17 +24,30 @@ public class HomePage extends BaseClass {
     By locatorBtnTrenes = By.xpath("//a[@title='Trenes']" );
     By locatorBtnTrenMasHotel = By.xpath("//a[@title='Tren + Hotel']" );
     */
-
+    //Metodo para abrir PopUp Login
 public void irALogin () {
     click(esperarAElementoWeb(locatorBtnLogin));
 }
 public void irAVuelos () {
     click(esperarAElementoWeb(locatorBtnVuelos));
     }
+    //Metodo para completar formulario
 public void CompletarLogin (String correo, String password){
     agregarTexto(esperarAElementoWeb(locatorInputEmailLogin),correo);
     agregarTexto(esperarAElementoWeb(locatorInputPasswordLogin),password);
     click(esperarAElementoWeb(locatorSubmitLogin));
 }
+    //clickea en el boton de hoteles
+    public void BtnHoteles(){
+        click(esperarAElementoWeb(locatorBtnHoteles));
+    }
+
+    //rechazar las cookies porque no me deja avanzar si nó
+    public void BtnRechazar(){
+
+        click(esperarAElementoWeb(LocatorCookies));
+
+        esperarXSegundos(1000);
+    }
 
 }
