@@ -14,8 +14,6 @@ public class CasoDePruebaHoteles {
 
     private Pages.HomePage HomePage;
     private HotelPage HotelPage;
-    private TrenesPage trenesPage;
-    private VuelosPage vuelosPage;
     private WebDriver driver;
     private String browser = "CHROME";
     private String propertyDriver = "webdriver.chrome.driver";
@@ -26,8 +24,7 @@ public class CasoDePruebaHoteles {
     public void preparacionTest() {
         HomePage = new HomePage(driver); //Se crea la page del home
         HomePage.conexionBrowser(browser, propertyDriver, urlDriver); //Se conecta el driver de chrome
-        HomePage = new HomePage(HomePage.getDriver()); //Se crea la page de registro
-
+        HomePage = new HomePage(HomePage.getDriver());
         HomePage.cargarPagina(url);
         HomePage.maximizarBrowser();
         HotelPage = new HotelPage(HomePage.getDriver());
