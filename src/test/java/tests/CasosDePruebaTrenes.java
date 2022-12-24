@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -46,11 +47,11 @@ public class CasosDePruebaTrenes {
         trenPage.completarBusquedaMes();
         trenPage.aumentarViajero();
         trenPage.clickBuscar();
+        trenPage.getUrl2();
+        String resultadoObtenido= trenPage.getUrl2();
 
-        //String url1= trenPage.getUrl1();
-        //trenPage.completarBusqueda("Madrid", "Barcelona");
-        //String url2= trenPage.getUrl2();
-        //Assert.assertEquals(url1, url2);
+        Assert.assertTrue(resultadoObtenido.startsWith("https://trenes.rumbo.es"));
+
 
     }
     @Test
@@ -60,7 +61,10 @@ public class CasosDePruebaTrenes {
         trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
         trenPage.completarBusquedaMes();
         trenPage.agregarNihno();
+        trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
+
+        Assert.assertEquals(2,trenPage.obtenerTotalPasajerosResultadoBusqueda());
     }
 
     @Test

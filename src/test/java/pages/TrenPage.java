@@ -9,6 +9,8 @@ import utils.BaseClass;
 
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+
 public class TrenPage extends BaseClass {
     public TrenPage(WebDriver driver) {
         super(driver);
@@ -21,14 +23,22 @@ public class TrenPage extends BaseClass {
     By locatorAumentarViajeros = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
     By locatorReducirViajeros = By.xpath("//button[@aria-label='Reducir el número de adultos']");
     By locatorAgregarNinho = By.xpath("//span[contains(text(),'Añadir un niño')]");
+    By locatorAgregarNinhoAdicional = By.xpath("//button[@aria-label='Aumentar el número de niños']");
     By locatorAgregarBebe11Meses = By.xpath("//li[contains(text(),'Bebé, 0-11 meses')]");
+    By locatorAgregarNinho2Anios = By.xpath("//li[contains(text(),'2 años')]");
     By locatorBtnBuscar= By.xpath("//button[contains(text(),'Buscar')]");
     By locatorRBOrigen= By.xpath("//div[@role='listbox']/div/div[2]/button");
     By locatorMesSiguiente = By.xpath("//button[@aria-label=\"Next month\"]");
     By locatorFIda=By.xpath("//button[contains(text(),1)]");
     By locatorFVuelta= By.xpath("//button[contains(text(),15)]");
 
+    public int contadorPasajerosAdultos(){
 
+        WebElement locatorContadorPasajerosAdultos = buscarElementoWeb(By.xpath("//div[contains(text(),'Adultos')]//parent::div//parent::div//following-sibling::span"));
+        int totalPasajerosAdultos= Integer.parseInt(locatorContadorPasajerosAdultos.getText());
+        System.out.println(totalPasajerosAdultos);
+        return totalPasajerosAdultos;
+    }
 
     public void completarBusquedaOrigenDestino(String origen, String destino) {
         esperarXSegundos(2000);
@@ -37,7 +47,7 @@ public class TrenPage extends BaseClass {
         click(locatorRBOrigen);
         esperarXSegundos(2000);
         agregarTexto(esperarAElementoWeb(locatorTxtDestino), destino);
-        esperarXSegundos(2000);
+        esperarXSegundos(4000);
         click(locatorRBOrigen);
         esperarXSegundos(5000);
     }
@@ -62,15 +72,24 @@ public class TrenPage extends BaseClass {
 
 
     }
-    public void agregarNihno () {
-        esperarXSegundos(4000);
+    //pendiente
+    public void agregarNihno() {
+        esperarXSegundos(2000);
         click(locatorAgregarNinho);
-        esperarXSegundos(4000);
-        click(locatorAgregarBebe11Meses);
+        esperarXSegundos(2000);
+        click(locatorAgregarNinho2Anios);
+    //    ScrollElementoWeb(locatorAgregarNinhoAdicional);
+    //    for(int i=1;i<=cantidadNinhos;i+=1)
+    //        System.out.println(i);
+    //        click(locatorAgregarNinhoAdicional);
+    //        esperarXSegundos(1000);
+    //        click(locatorAgregarNinho2Anios);
+    //        esperarXSegundos(1000);
+
     }
 
     public void clickBuscar () {
-        esperarAElementoWeb(locatorBtnBuscar);
+        click(esperarAElementoWeb(locatorBtnBuscar));
         esperarXSegundos(3000);
     }
 
@@ -83,6 +102,15 @@ public class TrenPage extends BaseClass {
         String url2 = driver.getCurrentUrl();
         return url2;
     }
+
+    public int obtenerTotalPasajerosResultadoBusqueda(){
+        WebElement locatorContadorPasajeros = buscarElementoWeb(By.xpath("//div[@class=\"search-summary__passsengers\"]//following-sibling::span"));
+        String numeroPasajeros = locatorContadorPasajeros.getText();
+        int valor= Integer.parseInt(numeroPasajeros);
+        return valor;
+    }
+
+
 
 
 }

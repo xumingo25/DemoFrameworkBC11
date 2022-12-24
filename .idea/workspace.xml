@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se renombra la clase CasosDePrueba a CasosDePruebaTrenes">
+    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se agregan metodos para el funcionamiento del caso de prueba 008.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" afterDir="false" />
@@ -61,6 +62,23 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP008_BusquedaTrenes_ViajeAdultoNihno">
+    <configuration name="CasosDePruebaTrenes" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
@@ -133,31 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePrueba.PruebasTrenHotel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
-      <option name="METHOD_NAME" value="PruebasTrenHotel" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP008_BusquedaTrenes_ViajeAdultoNihno" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes" />
         <item itemvalue="TestNG.CasosDePrueba.CP007_BusquedaTrenes_IdaVuelta" />
         <item itemvalue="TestNG.CasosDePrueba.CP008_BusquedaTrenes_ValidarViajeAdultoNinho" />
-        <item itemvalue="TestNG.CasosDePrueba.PruebasTrenHotel" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +252,8 @@
     <MESSAGE value="Se crea V1 de clase Base." />
     <MESSAGE value="Test" />
     <MESSAGE value="Se añade caso de prueba CP007_BusquedaTrenes_IdaVuelta, drivers, HomePage y TrenPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se añade caso de prueba CP007_BusquedaTrenes_IdaVuelta, drivers, HomePage y TrenPage" />
+    <MESSAGE value="Se agregan metodos para el funcionamiento del caso de prueba 008." />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan metodos para el funcionamiento del caso de prueba 008." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
