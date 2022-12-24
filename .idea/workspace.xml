@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se añade caso de prueba CP007_BusquedaTrenes_IdaVuelta, drivers, HomePage y TrenPage">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se renombra la clase CasosDePrueba a CasosDePruebaTrenes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +23,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,7 +48,9 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aaron.barra/Documents/GitHub/DemoFrameworkBC11&quot;
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ariana.niesi/Documents/DemoFrameworkBC11&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -48,20 +60,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BC11" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BC11" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP008_BusquedaTrenes_ViajeAdultoNihno">
     <configuration name="CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
@@ -80,7 +79,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePruebaTrenes.PruebaHoteles" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.CP008_BusquedaTrenes_ViajeAdultoNihno" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -90,7 +89,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
-      <option name="METHOD_NAME" value="PruebaHoteles" />
+      <option name="METHOD_NAME" value="CP008_BusquedaTrenes_ViajeAdultoNihno" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -98,7 +97,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePruebaTrenes.PruebaViajes" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePrueba.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -107,8 +106,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
-      <option name="METHOD_NAME" value="PruebaViajes" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP007_BusquedaTrenes_IdaVuelta" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -116,7 +115,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePruebaTrenes.PruebasTrenHotel" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePrueba.CP008_BusquedaTrenes_ValidarViajeAdultoNinho" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -125,26 +124,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
+      <option name="METHOD_NAME" value="CP008_BusquedaTrenes_ValidarViajeAdultoNinho" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasosDePrueba.PruebasTrenHotel" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePrueba" />
       <option name="METHOD_NAME" value="PruebasTrenHotel" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CasosDePruebaTrenes.PruebasVueloHotel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
-      <option name="METHOD_NAME" value="PruebasVueloHotel" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -154,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP008_BusquedaTrenes_ViajeAdultoNihno" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" />
-        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebasTrenHotel" />
-        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebaViajes" />
-        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebasVueloHotel" />
-        <item itemvalue="TestNG.CasosDePruebaTrenes.PruebaHoteles" />
+        <item itemvalue="TestNG.CasosDePrueba.CP007_BusquedaTrenes_IdaVuelta" />
+        <item itemvalue="TestNG.CasosDePrueba.CP008_BusquedaTrenes_ValidarViajeAdultoNinho" />
+        <item itemvalue="TestNG.CasosDePrueba.PruebasTrenHotel" />
       </list>
     </recent_temporary>
   </component>
@@ -206,14 +205,7 @@
       <option name="project" value="LOCAL" />
       <updated>1671778393835</updated>
     </task>
-    <task id="LOCAL-00006" summary="Se añade caso de prueba CP007_BusquedaTrenes_IdaVuelta, drivers, HomePage y TrenPage">
-      <created>1671805336065</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1671805336065</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,7 +213,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

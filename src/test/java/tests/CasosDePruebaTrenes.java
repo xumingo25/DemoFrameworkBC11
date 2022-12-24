@@ -42,11 +42,43 @@ public class CasosDePruebaTrenes {
     public void CP007_BusquedaTrenes_IdaVuelta() {
         homePage.aceptarCookies();
         homePage.irATrenes();
-        String url1= trenPage.getUrl1();
-        trenPage.completarBusqueda("Madrid", "Barcelona");
-        String url2= trenPage.getUrl2();
-        Assert.assertEquals(url1, url2);
+        trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
+        trenPage.completarBusquedaMes();
+        trenPage.aumentarViajero();
+        trenPage.clickBuscar();
 
+        //String url1= trenPage.getUrl1();
+        //trenPage.completarBusqueda("Madrid", "Barcelona");
+        //String url2= trenPage.getUrl2();
+        //Assert.assertEquals(url1, url2);
 
     }
+    @Test
+    public void CP008_BusquedaTrenes_ViajeAdultoNihno() {
+        homePage.aceptarCookies();
+        homePage.irATrenes();
+        trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
+        trenPage.completarBusquedaMes();
+        trenPage.agregarNihno();
+        trenPage.clickBuscar();
+    }
+
+    @Test
+    public void CP009_BusquedaTrenes_SeleccionarTicketMasBarato() {
+
+    }
+    @Test
+    public void CP010_BusquedaTrenes_ModificarParámetrosOfertasTrenHotel() {
+
+    }
+    @Test
+    public void CP011_BusquedaTrenes_TarjetaVencida() {
+
+    }
+    @Test
+    public void CP012_BusquedaTrenes_TarjetaSinFondos() {
+
+    }
+
+
 }
