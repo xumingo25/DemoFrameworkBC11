@@ -6,11 +6,12 @@ import utils.BaseClass;
 
 public class HomePage extends BaseClass {
     public HomePage(WebDriver driver) {
+
         super(driver);
     }
 
-    //Localizadores
 
+    //Localizadores
     By locatorBtnAceptarCookies = By.xpath("//button[contains(text(),'Aceptar todo')]");
     By locatorBtnTrenes = By.xpath("//a[@title=\"Trenes\"]");
     By locatorBtnVuelos = By.xpath("//a[@title=\"Vuelos\"]");
@@ -18,6 +19,7 @@ public class HomePage extends BaseClass {
     By locatorBtnViajes= By.xpath("//a[@title=\"Viajes\"]");
     By locatorBtnTren_Hotel= By.xpath("//a[@title=\"Tren + Hotel\"]");
     By locatorBtnHoteles= By.xpath("//a[@title=\"Hoteles\"]");
+
 
     //Metodos
 
