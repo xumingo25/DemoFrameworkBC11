@@ -1,6 +1,11 @@
 package Pages;
 
+import org.openqa.selenium.By;
+
 public class HomePage {
+    //borre prueba3
+
+
     //GFDHSDF
 
     //asd
@@ -10,5 +15,7 @@ public class HomePage {
 
     //a pedazos
 
+
     //fkjslkdfjas
+
 }
