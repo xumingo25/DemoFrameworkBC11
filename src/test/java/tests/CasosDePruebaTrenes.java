@@ -97,12 +97,25 @@ public class CasosDePruebaTrenes {
     }
     @Test
     public void CP011_BusquedaTrenes_TarjetaVencida() {
+        homePage.aceptarCookies();
+        homePage.irATrenes();
+        trenPage.boletoSoloIda();
+        trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
+        trenPage.completarFormularioSoloIda();
+        trenPage.aumentarViajero();
+        trenPage.clickBuscar();
+        trenPage.clickPrimerPasaje();
+        trenPage.formularioQuienReserva("Ariana","Niesi","ariananiesi@gmail.com",1157966485);
+        // completar formulario quién viaja
+        // completar formulario cómo deseas pagar
 
-    }
-    @Test
-    public void CP012_BusquedaTrenes_TarjetaSinFondos() {
+        }
+        @Test
+        public void CP012_BusquedaTrenes_TarjetaSinFondos() {
 
-    }
+        }
 
 
 }
+
+

@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se añade CPsHoteles y HotelesPages">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HotelesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HotelesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +60,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato">
+  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BC11" />
       <method v="2">
@@ -113,24 +109,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePruebaHoteles.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaHoteles" />
-      <option name="METHOD_NAME" value="CP007_BusquedaTrenes_IdaVuelta" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
@@ -167,13 +145,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
+      <option name="METHOD_NAME" value="CP011_BusquedaTrenes_TarjetaVencida" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato" />
         <item itemvalue="TestNG.CPsHoteles.CP0001_Registro_Fallido_Email_Invalido" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" />
         <item itemvalue="TestNG.CPsHoteles" />
-        <item itemvalue="TestNG.CasosDePruebaHoteles.CP007_BusquedaTrenes_IdaVuelta" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +239,39 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>

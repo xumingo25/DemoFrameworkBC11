@@ -31,6 +31,17 @@ public class TrenPage extends BaseClass {
     By locatorMesSiguiente = By.xpath("//button[@aria-label=\"Next month\"]");
     By locatorFIda=By.xpath("//button[contains(text(),15)]");
     By locatorFVuelta= By.xpath("//button[contains(text(),30)]");
+    By locatorSoloIda = By.xpath("//div[contains(text(),'Solo ida')]");
+    By locatorPrimerPasaje = By.xpath("//section[@data-role='results']//following::span[1][@size=24]");
+
+    //locators quién reserva
+
+    By locatorNombre = By.xpath("//input[@name='name']");
+    By locatorApellido = By.xpath("//input[@name='surname']");
+    By locatorEmail = By.xpath("//input[@name='email' and @id = 'contact-email']");
+    //By locatorCodigoArea = By.xpath("//div[contains(text(),'+34')]");
+    By locatorCodigoArea= By.xpath("//div[@class='arrow down']");
+    By locatorCodigoAreaArg = By.xpath("//li[@data-country-code='ar']");
 
     public int contadorPasajerosAdultos(){
 
@@ -112,7 +123,43 @@ public class TrenPage extends BaseClass {
         return valor;
     }
 
+    public void boletoSoloIda(){
+        click(locatorSoloIda);
+    }
 
+    public void completarFormularioSoloIda(){
+        click(locatorMesSiguiente);
+        esperarXSegundos(1000);
+        click(locatorMesSiguiente);
+        esperarXSegundos(1000);
+        click(locatorFIda);
+        esperarXSegundos(2000);
+    }
+
+    public void clickPrimerPasaje(){
+        click(locatorPrimerPasaje);
+    }
+
+    public void formularioQuienReserva(String nombre, String apellido, String email, Integer numero) {
+        agregarTexto(esperarAElementoWeb(locatorNombre),nombre);
+        esperarXSegundos(1000);
+        ScrollElementoWeb(locatorApellido);
+        agregarTexto(esperarAElementoWeb(locatorApellido),apellido);
+        esperarXSegundos(1000);
+        agregarTexto(esperarAElementoWeb(locatorEmail),email);
+        esperarXSegundos(2000);
+        click(locatorCodigoArea);
+        esperarXSegundos(2000);
+        ScrollElementoWeb(locatorCodigoAreaArg);
+        click(locatorCodigoAreaArg);
+
+
+
+
+
+
+
+   }
 
 
 }
