@@ -1,12 +1,14 @@
 package tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import pages.ResultadoTrenesPage;
 import pages.TrenPage;
 import utils.PropertiesDriven;
 
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 public class CasosDePruebaTrenes {
     private HomePage homePage;
     private TrenPage trenPage;
+    private ResultadoTrenesPage resultadoTrenesPage;
     private WebDriver driver;
     private final String browser = PropertiesDriven.getProperty("browser");
     private final String propertyDriver = PropertiesDriven.getProperty("propertyDriver");
@@ -33,6 +36,7 @@ public class CasosDePruebaTrenes {
         homePage.cargarPagina(url);
         homePage.maximizarBrowser();
         trenPage = new TrenPage(homePage.getDriver());
+        resultadoTrenesPage= new ResultadoTrenesPage(homePage.getDriver());
     }
 
     @AfterMethod
@@ -64,15 +68,31 @@ public class CasosDePruebaTrenes {
         trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
 
-        Assert.assertEquals(2,trenPage.obtenerTotalPasajerosResultadoBusqueda());
+        Assert.assertEquals(2, trenPage.obtenerTotalPasajerosResultadoBusqueda());
+        //Falta parametrizar el valor actual de pasajeros.
     }
 
     @Test
     public void CP009_BusquedaTrenes_SeleccionarTicketMasBarato() {
+        homePage.aceptarCookies();
+        homePage.irATrenes();
+        trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
+        trenPage.completarBusquedaMes();
+        trenPage.agregarNihno();
+        trenPage.contadorPasajerosAdultos();
+        trenPage.clickBuscar();
+        //homePage.handleTabs();
+        resultadoTrenesPage.obtenerValorMasBaratoHead();
+        resultadoTrenesPage.seleccionarBotonMasBarato();
+        resultadoTrenesPage.obtenerValorMasBarato();
+        resultadoTrenesPage.obtenerValorMasBaratoHead();
+        Assert.assertEquals(resultadoTrenesPage.obtenerValorMasBarato(),"21,00 €");
+        //actualizar el valor del Assert valor esperado. Falta llamar valor desde la pagina de resultado busqueda
+
 
     }
     @Test
-    public void CP010_BusquedaTrenes_ModificarParámetrosOfertasTrenHotel() {
+    public void CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel() {
 
     }
     @Test

@@ -51,8 +51,8 @@ public class HomePage extends BaseClass {
         click(esperarAElementoWeb(locatorBtnHoteles));
     }
 
-    public void hola(){
-
+    public void handles(){
+        handleTabs();
     }
 
 

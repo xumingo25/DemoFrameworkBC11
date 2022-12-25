@@ -29,8 +29,8 @@ public class TrenPage extends BaseClass {
     By locatorBtnBuscar= By.xpath("//button[contains(text(),'Buscar')]");
     By locatorRBOrigen= By.xpath("//div[@role='listbox']/div/div[2]/button");
     By locatorMesSiguiente = By.xpath("//button[@aria-label=\"Next month\"]");
-    By locatorFIda=By.xpath("//button[contains(text(),1)]");
-    By locatorFVuelta= By.xpath("//button[contains(text(),15)]");
+    By locatorFIda=By.xpath("//button[contains(text(),15)]");
+    By locatorFVuelta= By.xpath("//button[contains(text(),30)]");
 
     public int contadorPasajerosAdultos(){
 
@@ -52,6 +52,8 @@ public class TrenPage extends BaseClass {
         esperarXSegundos(5000);
     }
     public void completarBusquedaMes() {
+        click(locatorMesSiguiente);
+        esperarXSegundos(1000);
         click(locatorMesSiguiente);
         esperarXSegundos(1000);
         click(locatorFIda);

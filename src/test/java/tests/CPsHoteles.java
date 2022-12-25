@@ -8,25 +8,25 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.HotelesPage;
 import utils.PropertiesDriven;
+import utils.BaseClass;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class CPsHoteles {
     private HomePage homepage;
     private HotelesPage hotelesPage;
     private WebDriver driver;
-    private String browser = PropertiesDriven.getProperty("browser");
-    private String propertyDriver = PropertiesDriven.getProperty("propertyDriver");
-    private String urlDriver = PropertiesDriven.getProperty("rutaDriver");
-    private  String url = PropertiesDriven.getProperty("url");
+    private final String browser = PropertiesDriven.getProperty("browser");
+    private final String propertyDriver = PropertiesDriven.getProperty("propertyDriver");
+    private final String urlDriver = PropertiesDriven.getProperty("urlDriver");
+    private final String url = PropertiesDriven.getProperty("url");
 
     private ArrayList<String> data;
 
 
     @BeforeTest
-
     public void preparacionTest(){
-
         homepage = new HomePage(driver);
         homepage.conexionBrowser(browser,propertyDriver,urlDriver);
         homepage.cargarPagina(url);
@@ -34,16 +34,41 @@ public class CPsHoteles {
         hotelesPage = new HotelesPage(homepage.getDriver());
     }
 
+    public void handleTabs() throws InterruptedException{
+        String mainTab = driver.getWindowHandle();
+        String newTab = "";
+
+        System.out.println("Main Tab: "+ mainTab);
+
+        Set<String> handles= driver.getWindowHandles();
+
+        for (String actual : handles){
+            System.out.println("-- Handled ID: +" + actual);
+
+            if(!actual.equalsIgnoreCase(mainTab)){
+                System.out.println("--Changing Tab--");
+                driver.switchTo().window(actual);
+
+                newTab = actual;
+            }
+        }
+    }
+
 
     @Test
-    public void CP0001_Registro_Fallido_Email_Invalido(){
-
+    public void CP0001_Registro_Fallido_Email_Invalido() throws InterruptedException {
         homepage.aceptarCookies();
         homepage.irAHoteles();
         hotelesPage.completarBusqueda("santiago de chile");
-        hotelesPage.getUrl1();
-      //  String resultadoObtenido = HotelesPage.getUrl1();
-      //  Assert.assertTrue(resultadoObtenido.startsWith("https://inspirame.rumbo.es"));
+        hotelesPage.getUrl3();
+        String resultadoObtenido = hotelesPage.getUrl3();
+        System.out.println(resultadoObtenido);
+
+        Assert.assertTrue(resultadoObtenido.contains("https://inspirame.rumbo.es"));
+
+
+
+
 
 
 

@@ -23,12 +23,12 @@ public class HotelesPage extends BaseClass {
     By locatorMesSiguiente = By.xpath("//button[@aria-label=\"Next month\"]");
     By locatorFIda=By.xpath("//button[contains(text(),1)]");
     By locatorFVuelta= By.xpath("//button[contains(text(),15)]");
-    By locatorBtnBuscar = By.xpath("(//button[@type='submit'][normalize-space()='Buscar'])[2]");
+    By locatorBtnBuscarHoteles = By.xpath("//button[@type= 'submit']");
 
 
-    public String getUrl1(){
-        String url1 = driver.getCurrentUrl();
-        return url1;
+    public String getUrl3(){
+        String url3 = driver.getCurrentUrl();
+        return url3;
     }
 
     //realizar accion en el sitio
@@ -47,9 +47,9 @@ public class HotelesPage extends BaseClass {
         esperarXSegundos(1000);
         click(locatorAumentarViajeros);
         esperarXSegundos(1000);
-        // click(esperarAElementoWeb(locatorBtnBuscar));
-        esperarXSegundos(3000);
-        click(locatorBtnBuscar);
+        click(esperarAElementoWeb(locatorBtnBuscarHoteles));
+        esperarXSegundos(10000);
+
 
 
 
