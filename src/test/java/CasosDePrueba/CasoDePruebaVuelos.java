@@ -5,6 +5,8 @@ import Pages.VuelosPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import Pages.VuelosPage;
+import utils.BaseClass;
 
 public class CasoDePruebaVuelos {
 
