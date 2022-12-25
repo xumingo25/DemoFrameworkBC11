@@ -51,7 +51,6 @@ public class VuelosPage extends BaseClass {
         click(esperarAElementoWeb(locatorSeleccionarBuscar));
     }
 
-
 }
 
 
