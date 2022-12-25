@@ -94,6 +94,14 @@ public class CasosDePruebaTrenes {
     @Test
     public void CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel() {
 
+        homePage.aceptarCookies();
+        homePage.irATrenes();
+        trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
+        trenPage.completarBusquedaMes();
+        trenPage.contadorPasajerosAdultos();
+        trenPage.clickBuscar();
+        resultadoTrenesPage.modificarParametros("Albacete","Alicante");
+
     }
     @Test
     public void CP011_BusquedaTrenes_TarjetaVencida() {

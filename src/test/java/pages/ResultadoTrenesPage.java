@@ -15,6 +15,15 @@ public class ResultadoTrenesPage extends BaseClass {
     By locatorBtnMasBarato = By.xpath("//ul[@role='tablist']/li[2]");
     By locatorPrecioMasBarato = By.xpath("//section[@data-role='results']//following::span[1][@size=24]");
     By locatorPrecioMasBaratoHead = By.xpath("//ul[@role='tablist']/li[2]/div[@class='sorting-tabs-view__amount']");
+    By locatorBtnModificar = By.xpath("//span[contains(text(),'Modificar')]");
+    By locatorSeleccionarNuevoOrigen= By.xpath("//input[@id='fromPlace']");
+    By locatorIngresarNuevoDestino = By.xpath("//input[@id=\"toPlace\"]");
+    By locatorRBNuevoOrigen = By.xpath("//section//child::button");
+    By locatorClickNuevoDestino = By.xpath("//div[@role=\"option\"]");
+    By locatorFIda=By.xpath("//button[contains(text(),15)]");
+    By locatorFVuelta= By.xpath("//button[contains(text(),30)]");
+    By locatorAumentarViajeros = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
+    By locatorBtnBuscar = By.xpath("//button[@type= 'submit']");
 
 
     public void seleccionarBotonMasBarato() {
@@ -39,5 +48,30 @@ public class ResultadoTrenesPage extends BaseClass {
         return prueba;
         //     return (String) executor.executeScript("arguments[0].textContent()",valorMasBaratoHead);
     }
-}
 
+    public void modificarParametros(String origen, String destino){
+        esperarXSegundos(5000);
+        click(locatorBtnModificar);
+        esperarXSegundos(2000);
+        click(buscarElementoWeb(locatorSeleccionarNuevoOrigen));
+        esperarXSegundos(2000);
+        agregarTexto(locatorSeleccionarNuevoOrigen,origen);
+        esperarXSegundos(2000);
+        click(locatorRBNuevoOrigen);
+        esperarXSegundos(2000);
+        agregarTexto(locatorIngresarNuevoDestino,destino);
+        esperarXSegundos(2000);
+        click(locatorClickNuevoDestino);
+        esperarXSegundos(2000);
+        click(locatorFIda);
+        esperarXSegundos(2000);
+        click(locatorFVuelta);
+        esperarXSegundos(2000);
+        click(locatorAumentarViajeros);
+        esperarXSegundos(2000);
+        click(locatorBtnBuscar);
+
+
+
+    }
+}
