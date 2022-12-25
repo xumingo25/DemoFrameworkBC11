@@ -56,13 +56,12 @@ public class CPsHoteles {
 
 
     @Test
-    public void CP0001_Registro_Fallido_Email_Invalido() throws InterruptedException {
+    public void CP0001_Registro_Fallido_Email_Invalido() {
         homepage.aceptarCookies();
         homepage.irAHoteles();
         hotelesPage.completarBusqueda("santiago de chile");
-        hotelesPage.getUrl3();
+        homepage.handleTabs();
         String resultadoObtenido = hotelesPage.getUrl3();
-        System.out.println(resultadoObtenido);
 
         Assert.assertTrue(resultadoObtenido.contains("https://inspirame.rumbo.es"));
 

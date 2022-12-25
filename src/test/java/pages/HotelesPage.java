@@ -35,7 +35,7 @@ public class HotelesPage extends BaseClass {
     public void completarBusqueda(String dondeQuieresIr){
         esperarXSegundos(2000);
         agregarTexto(esperarAElementoWeb(locatorTxtDondeQuieresIr),dondeQuieresIr);
-        esperarXSegundos(1000);
+        esperarXSegundos(3000);
         click(locatorResultadoBusqueda);
         //click(locatorRBOrigen);
         esperarXSegundos(5000);
