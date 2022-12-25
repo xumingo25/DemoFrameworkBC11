@@ -18,10 +18,18 @@ public class VuelosPage extends BaseClass {
     By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Turista')]"));
     By locatorSeleccionarBuscar=By.xpath(("//Button[contains(text(),'Buscar')]"));
 
+    By locatorFiltrarBarato=By.xpath(("//div[contains(text(),'Más barato')]"));
+
+    By locatorElegirVuelo=By.xpath(("//span[contains(text(),'387,99')]"));
+
+    By locatorElegirOpcionFlexible=By.xpath(("//button[contains(text(),'Elegir Flexible')]"));
+
+    By locatorVerDetalle=By.xpath(("//button[contains(text(),'ver detalles')]"));
 
 
 
-    public void seleccionarVueloIda(){
+
+    public void SeleccionarVueloIda(){
         click(esperarAElementoWeb(locatorBtnVueloIda));
     }
     public void SeleccionarOrigen(String ciudadOrigen){
@@ -50,6 +58,16 @@ public class VuelosPage extends BaseClass {
     public void SeleccionarBuscar(){
         click(esperarAElementoWeb(locatorSeleccionarBuscar));
     }
+    public void FiltrarBarato(){
+        click(esperarAElementoWeb(locatorFiltrarBarato));
+    }
+    public void ElegirVuelo(){click(esperarAElementoWeb(locatorElegirVuelo));
+    }
+    public void ElegirOpcionFlexible(){click(esperarAElementoWeb(locatorElegirOpcionFlexible));
+    }
+    public void VerDetalle(){click(esperarAElementoWeb(locatorVerDetalle));
+    }
+
 
 
 }
