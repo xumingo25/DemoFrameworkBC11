@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Merge Trenes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ResultadoTrenesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ResultadoTrenesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HotelesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HotelesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaVuelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaVuelos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +275,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="upstream/AaronBarra" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

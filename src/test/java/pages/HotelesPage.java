@@ -10,8 +10,6 @@ public class HotelesPage extends BaseClass {
         super(driver);
     }
 
-
-
     By locatorTxtDondeQuieresIr = By.xpath("//input[@placeholder='¿Adónde quieres ir?']");
     By locatorTxtFechaIda = By.xpath("(//button[@type='button'])[13] or @class,'display-19sl708-DateInput-styled-DateInput-styled')])[1] ");
     By locatorTxtFechaVuelta = By.xpath("(//button[contains(@type,'button')])[14] or @class,'display-3uz90')]");
@@ -54,6 +52,8 @@ public class HotelesPage extends BaseClass {
 
 
     }
+
+
 
 
 
