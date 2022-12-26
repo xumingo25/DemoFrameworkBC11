@@ -41,8 +41,9 @@ public class CasosDePruebaTrenes {
     }
 
     @AfterMethod
-    //public void posTests(){;
-    //}
+    public void posTests(){
+        trenPage.cerrarBrowser();
+    }
 
     @Test
     public void CP007_BusquedaTrenes_IdaVuelta() {

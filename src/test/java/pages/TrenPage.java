@@ -14,7 +14,7 @@ public class TrenPage extends BaseClass {
         super(driver);
     }
 
-    //Locators
+    //Localizadores
     By locatorTxtOrigen = By.xpath("//input[@placeholder='Origen']");
     By locatorTxtDestino = By.xpath("//input[@placeholder='Destino']");
     By locatorBtnViajeros = By.xpath("//span[contains(text(),'1 viajero')]");
@@ -67,8 +67,7 @@ public class TrenPage extends BaseClass {
     By locatorScrollBtnAplicar = By.xpath("//div[contains(text(),'Aplicar')]");
     By locatorBtnReservar = By.xpath("//button[@data-test='submit-button']");
 
-
-
+    //Metodos
     public int contadorPasajerosAdultos(){
 
         WebElement locatorContadorPasajerosAdultos = buscarElementoWeb(By.xpath("//div[contains(text(),'Adultos')]//parent::div//parent::div//following-sibling::span"));
