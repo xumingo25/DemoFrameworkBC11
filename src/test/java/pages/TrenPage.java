@@ -268,16 +268,18 @@ public class TrenPage extends BaseClass {
         click(locatorContinuarSinFlex);
         esperarXSegundos(6000);
     }
-        public String resultadoObtenidoTarjetaVencida(){
+
+    public String resultadoObtenidoTarjetaVencida() {
         WebElement valor = driver.findElement(locatorErrorTarjetaVencida);
         String texto = valor.getText();
         return texto;
-       }
-       public String resultadoObtenidoTarjetaSinFondos(){
+    }
+
+    public String resultadoObtenidoTarjetaSinFondos() {
         WebElement valor = driver.findElement(locatorErrorTarjetaSinFondos);
         String texto = valor.getText();
         return texto;
-       }
+    }
 
 }
 

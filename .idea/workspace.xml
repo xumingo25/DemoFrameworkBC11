@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +21,14 @@
       <list>
         <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/ArianaNiesi" />
+    <option name="OPTIONS">
+      <set>
+        <option value="INTERACTIVE" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -60,7 +69,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida">
+  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CPprueba">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BC11" />
       <method v="2">
@@ -70,23 +79,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="BC11" />
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CPsHoteles" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CPsHoteles" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,7 +137,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -155,7 +147,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
-      <option name="METHOD_NAME" value="CP011_BusquedaTrenes_TarjetaVencida" />
+      <option name="METHOD_NAME" value="CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasosDePruebaTrenes.CPprueba" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
+      <option name="METHOD_NAME" value="CPprueba" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -165,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida" />
-        <item itemvalue="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CPprueba" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel" />
         <item itemvalue="TestNG.CPsHoteles.CP0001_Registro_Fallido_Email_Invalido" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" />
-        <item itemvalue="TestNG.CPsHoteles" />
       </list>
     </recent_temporary>
   </component>
@@ -231,7 +241,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671917339430</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Se Actualiza caso 8 y 9&#10;Se crea clase ResultadoTrenesPages&#10;Se crean nuevos metodos en la clase BaseClass, TrenPage.&#10;Se incorpora metodo &quot;cambiar pestaña&quot;, disponible en la clase BaseClass.&#10;Fix errores causados por cambios en la pagina web.">
+      <created>1671954530546</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671954530546</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Actualizado y finalizado caso 001">
+      <created>1671955880686</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671955880686</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Actualizacion desarrollo CP10">
+      <created>1672001102234</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672001102234</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,39 +270,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="*" />
-                </option>
-              </RecentGroup>
-            </list>
+            <State />
           </value>
         </entry>
       </map>
@@ -284,6 +283,9 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Se añade caso de prueba CP007_BusquedaTrenes_IdaVuelta, drivers, HomePage y TrenPage" />
     <MESSAGE value="Se añade CPsHoteles y HotelesPages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se añade CPsHoteles y HotelesPages" />
+    <MESSAGE value="Se Actualiza caso 8 y 9&#10;Se crea clase ResultadoTrenesPages&#10;Se crean nuevos metodos en la clase BaseClass, TrenPage.&#10;Se incorpora metodo &quot;cambiar pestaña&quot;, disponible en la clase BaseClass.&#10;Fix errores causados por cambios en la pagina web." />
+    <MESSAGE value="Actualizado y finalizado caso 001" />
+    <MESSAGE value="Actualizacion desarrollo CP10" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion desarrollo CP10" />
   </component>
 </project>

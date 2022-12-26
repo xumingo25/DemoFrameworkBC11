@@ -137,12 +137,7 @@ public class CasosDePruebaTrenes {
 
         }
 
-    @Test
-    public void CPprueba(){
-        homePage.aceptarCookies();
-        homePage.irATrenes();
-        trenPage.scrollFin();
-    }
+
 
 
 }
