@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se crea V1 de clase Base.">
+    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RegisterPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CPs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/drivers/chromedriver.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/drivers/geckodriver.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +22,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/BC11G3" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="BC11G3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -45,7 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/domingo.saavedra/Downloads/DemoFrameworkBootCamp/src/test/java/utils&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jenifer.espeche/Desktop/DemoFrameworkBC11&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -55,20 +58,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BC11" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BC11" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.CasoDePruebaVuelos.CP002_Ver_Precios_Ida_Y_Vuelta">
     <configuration name="CPs" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BC11" />
       <extension name="coverage">
@@ -122,8 +112,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CasoDePruebaVuelos.CP002_Ver_Precios_Ida_Y_Vuelta" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Proyectazo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CasosDePrueba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaVuelos" />
+      <option name="METHOD_NAME" value="CP002_Ver_Precios_Ida_Y_Vuelta" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CasoDePruebaVuelos.CP002_Ver_Precios_Ida_Y_Vuelta" />
         <item itemvalue="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco" />
         <item itemvalue="TestNG.CPs" />
         <item itemvalue="TestNG.CPs.CP002_Registro_Fallido_Password_Corta" />
@@ -160,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671120045211</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Testeando el push">
+      <created>1671826388337</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671826388337</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -178,7 +194,8 @@
     <MESSAGE value="Se sube a repo estructura base del proyecto" />
     <MESSAGE value="Se actualiza pom. Se agrega dependencia de Selenium V 3.141.59" />
     <MESSAGE value="Se crea V1 de clase Base." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se crea V1 de clase Base." />
+    <MESSAGE value="Testeando el push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testeando el push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
