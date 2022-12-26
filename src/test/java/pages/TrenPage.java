@@ -1,9 +1,6 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import utils.BaseClass;
@@ -30,15 +27,50 @@ public class TrenPage extends BaseClass {
     By locatorBtnBuscar= By.xpath("//button[contains(text(),'Buscar')]");
     By locatorRBOrigen= By.xpath("//div[@role='listbox']/div/div[2]/button");
     By locatorMesSiguiente = By.xpath("//button[@aria-label=\"Next month\"]");
-    By locatorFIda=By.xpath("//button[contains(text(),14)]");
-    By locatorFVuelta= By.xpath("//button[contains(text(),28)]");
+    By locatorFIda=By.xpath("//button[contains(text(),15)]");
+    By locatorFVuelta= By.xpath("//button[contains(text(),30)]");
+    By locatorSoloIda = By.xpath("//div[contains(text(),'Solo ida')]");
+    By locatorPrimerPasaje = By.xpath("//section[@data-role='results']//following::span[1][@size=24]");
 
-    public void scrollFin(){
-        ((JavascriptExecutor) driver)
-                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
-    }
+    //locators quién reserva
+
+    By locatorNombre = By.xpath("//input[@name='name']");
+    By locatorApellido = By.xpath("//input[@name='surname']");
+    By locatorEmail = By.xpath("//input[@name='email' and @id = 'contact-email']");
+    //By locatorCodigoArea = By.xpath("//div[contains(text(),'+34')]");
+    By locatorCodigoArea= By.xpath("//div[@class='arrow down']");
+    By locatorCodigoAreaArg = By.xpath("//li[@data-country-code='ar']");
+    By locatorNumero = By.xpath("//input[@name='phone']");
+    By locatorSra = By.xpath("//input[@value='FEMALE']");
+    By locatorDia = By.xpath("//input[@placeholder='DD']");
+    By locatorMes = By.xpath("//select[@aria-label='Selecciona el mes']");
+    By locatorAnho = By.xpath("//input[@placeholder='AAAA']");
+    //By locatorTipoDoc = By.xpath("//div[@data-test='document-type-input']");
+    //By locatorTipoDoc = By.xpath("//select[@aria-label='groups.1.travellers.1.documentType']");
+    //By locatorPA = By.xpath("//option[@value='PA']");
+    By locatorTipoDocPa= By.xpath("//div[@class='traveller-info__documents-wrapper']//descendant-or-self::input");
+    By locatorNumeroDoc = By.xpath("//input[@name='groups.1.travellers.1.documentNumber']");
+    //By locatorCheckNoGracias = By.xpath("//div[@class='radio']//child::check");
+    By locatorCheckNoGracias = By.xpath("//label[@class='insurance__noThanks-radio-label']//child:: span[@class='check']");
+    By locatorPaquetePremium = By.xpath("//b[contains(text(),'Paquete de Servicio Premium')]");
+    By locatorBtnSiguiente = By.xpath("//button[contains(text(),'Siguiente')]");
+
+    //locators pago
+    By locatorTxtTitularTarjeta = By.xpath("//input[@name= 'creditCard.cardHolder']");
+    By locatorTxtNroTarjeta = By.xpath("//input[@name='creditCard.cardNumber']");
+    By locatorTxtMesCaducidad = By.xpath("//input[@placeholder='MM']");
+    By locatorTxtAnioCaducidad = By.xpath("//input[@placeholder='AA']");
+    By locatorTxtCVV = By.xpath("//input[@name='creditCard.cvv']");
+    By locatorErrorTarjetaVencida = By.xpath("//div[contains(text(),'Tu tarjeta ha caducado')]");
+    By locatorContinuarSinFlex = By.xpath("//span[@class='btn insurance-modal__deny-button  btn-link underlined']");
+    By locatorErrorTarjetaSinFondos = By.xpath("//div[contains(text(),'Lo sentimos')]");
+    By locatorScrollBtnAplicar = By.xpath("//div[contains(text(),'Aplicar')]");
+    By locatorBtnReservar = By.xpath("//button[@data-test='submit-button']");
+
+
 
     public int contadorPasajerosAdultos(){
+
         WebElement locatorContadorPasajerosAdultos = buscarElementoWeb(By.xpath("//div[contains(text(),'Adultos')]//parent::div//parent::div//following-sibling::span"));
         int totalPasajerosAdultos= Integer.parseInt(locatorContadorPasajerosAdultos.getText());
         System.out.println(totalPasajerosAdultos);
@@ -117,9 +149,141 @@ public class TrenPage extends BaseClass {
         return valor;
     }
 
+    public void boletoSoloIda(){
+        click(locatorSoloIda);
+    }
 
+    public void completarFormularioSoloIda(){
+        click(locatorMesSiguiente);
+        esperarXSegundos(1000);
+        click(locatorMesSiguiente);
+        esperarXSegundos(1000);
+        click(locatorFIda);
+        esperarXSegundos(2000);
+    }
 
+    public void presionarTab(){
+        WebElement element = driver.findElement(By.xpath("//div[@class='traveller-info__documents-wrapper']//descendant-or-self::input"));
+        element.sendKeys(Keys.TAB);
+
+    }
+
+    public void clickPrimerPasaje(){
+        click(locatorPrimerPasaje);
+    }
+
+    public void seleccionarCodigoArea() {
+        esperarXSegundos(2000);
+        WebElement element = driver.findElement(By.xpath("//div[@class='arrow down']"));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click()", element);
+    }
+
+    public void seleccionarMes(){
+        driver.findElement(By.xpath("//select/option[@value='10']")).click();
+
+    }
+    public void seleccionarSra(){
+        WebElement element = driver.findElement(By.xpath("//input[@value='FEMALE']"));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click()", element);
+
+    }
+    public void seleccionarDroplist(){
+        esperarXSegundos(3000);
+        WebElement element = driver.findElement(By.xpath("//div[@data-test='document-type-input']"));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value='PA'", element);
+    }
+
+    public void formularioQuienReserva(String nombre, String apellido, String email, String numero, String DD, String anho) {
+        agregarTexto(esperarAElementoWeb(locatorNombre),nombre);
+        esperarXSegundos(1000);
+        ScrollElementoWeb(locatorApellido);
+        agregarTexto(esperarAElementoWeb(locatorApellido),apellido);
+        esperarXSegundos(1000);
+        agregarTexto(esperarAElementoWeb(locatorEmail),email);
+        esperarXSegundos(2000);
+        //click(locatorCodigoArea);
+        seleccionarCodigoArea();
+        esperarXSegundos(2000);
+        ScrollElementoWeb(locatorCodigoAreaArg);
+        click(locatorCodigoAreaArg);
+        agregarTexto(esperarAElementoWeb(locatorNumero),numero);
+        esperarXSegundos(1000);
+        ScrollElementoWeb(locatorSra);
+        //click(locatorSra);
+        seleccionarSra();
+        esperarXSegundos(1000);
+        agregarTexto(esperarAElementoWeb(locatorDia),DD);
+        esperarXSegundos(1000);
+        click(locatorMes);
+        seleccionarMes();
+        esperarXSegundos(1000);
+        agregarTexto(esperarAElementoWeb(locatorAnho),anho);
+        esperarXSegundos(1000);
+        agregarTexto(locatorTipoDocPa,"Pasaporte");
+        presionarTab();
+        agregarTexto(locatorNumeroDoc,"1234567");
+        esperarXSegundos(2000);
+        ScrollElementoWeb(locatorNumeroDoc);
+        ScrollElementoWeb(locatorPaquetePremium);
+        click(locatorCheckNoGracias);
+        esperarXSegundos(1000);
+        click(locatorBtnSiguiente);
+
+    }
+    public void clickJs(String locator){
+        esperarXSegundos(5000);
+        WebElement element = driver.findElement(By.xpath(locator));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click()", element);
+    }
+
+    public void formularioMetodoDePago(String titulartarjeta, String nrotarjeta, String mescaducidad, String aniocaducidad, String cvv) {
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtTitularTarjeta), titulartarjeta);
+        esperarXSegundos(2000);
+        //clickJs("//input[@name='creditCard.cardNumber']");
+        click(locatorTxtNroTarjeta);
+        esperarXSegundos(2000);
+        click(locatorTxtNroTarjeta);
+        agregarTexto(esperarAElementoWeb(locatorTxtNroTarjeta), nrotarjeta);
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtMesCaducidad), mescaducidad);
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtAnioCaducidad), aniocaducidad);
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtCVV), cvv);
+        esperarXSegundos(2000);
+    }
+    public void clickReservar(){
+        ScrollElementoWeb(locatorTxtCVV);
+        ScrollElementoWeb(locatorScrollBtnAplicar);
+        click(locatorBtnReservar);
+        esperarXSegundos(5000);
+    }
+
+    public void continuarSinFlex(){
+        click(locatorContinuarSinFlex);
+        esperarXSegundos(6000);
+    }
+        public String resultadoObtenidoTarjetaVencida(){
+        WebElement valor = driver.findElement(locatorErrorTarjetaVencida);
+        String texto = valor.getText();
+        return texto;
+       }
+       public String resultadoObtenidoTarjetaSinFondos(){
+        WebElement valor = driver.findElement(locatorErrorTarjetaSinFondos);
+        String texto = valor.getText();
+        return texto;
+       }
 
 }
+
+
+
+
+
 
 
