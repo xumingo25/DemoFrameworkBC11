@@ -26,12 +26,7 @@ public class HomePage extends BaseClass {
     By locatorEliminarcookies = By.xpath("//button[contains(text(),'Rechazar todo')]");
     By clickOutletVuelos = By.xpath("(//li[@class='display-1laifbo-DropdownList e12exe0f0'])[4]");
 
-    public void ingresarVermas(){
-        click(esperarAElementoWeb(locatorbtnVerMas));
-    }
-    public  void  irEliminarCookies(){
-        click(esperarAElementoWeb(locatorEliminarcookies));
-    }
+
     public void ingresarOutletVuelos(){
         click(esperarAElementoWeb(clickOutletVuelos));
     }
@@ -48,6 +43,40 @@ public class HomePage extends BaseClass {
 
     //Fin Localizadores Juan Ignacio Ferreira
     //Localizadores (By) Joaquin Mercado
+
+    By locatorbtnEscapadas = By.xpath("//a[@title=\"Escapadas\"]");
+
+    //test 2
+    By locatorBtnEvInspirar = By.xpath("//*[contains(@data-opti,'hub-microsite-cards-grid-1650452686588')]");
+
+    //test 4
+    By locatorBtnFlsahSales = By.xpath("(//*[contains(@class,'e10w470p0')])[7]");
+
+
+    public void ingresarVermas(){
+        click(esperarAElementoWeb(locatorbtnVerMas));
+    }
+    public  void  irEliminarCookies(){
+        click(esperarAElementoWeb(locatorEliminarcookies));
+    }
+    //test 1--------------------------------------------------------------------------------------------------
+    public void ingresarEscapadas(){
+        click(esperarAElementoWeb(locatorbtnEscapadas));
+    }
+
+    //test 2--------------------------------------------------------------------------------------------------
+    public void ingresar_inspirar(){
+        click(esperarAElementoWeb(locatorBtnEvInspirar));
+    }
+//test 3--------------------------------------------------------------------------------------------------
+
+
+
+    //test 4--------------------------------------------------------------------------------------------------
+    public void ingresar_flash_sales(){
+        click(esperarAElementoWeb(locatorBtnFlsahSales));
+    }
+
 
 
 

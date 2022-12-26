@@ -7,7 +7,7 @@
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se crea V1 de clase Base.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,16 +35,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/rodolfo.cancino/Desktop/DemoFrameworkBC11/src/test/java/pages"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rodolfo.cancino/Desktop/DemoFrameworkBC11/src/test/java/pages&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rodolfo.cancino\Desktop\DemoFrameworkBC11\src\test\java\pages" />
+      <recent name="C:\Users\rodolfo.cancino\Desktop\DemoFrameworkBC11\src\test\java\tests" />
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\java\utils" />
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources\data" />
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
@@ -53,7 +54,7 @@
       <recent name="tests" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CPsRodolfo.CP015_Registro_Viaje_En_Tren">
+  <component name="RunManager" selected="TestNG.CPsJoaquin.CP09_viaje_a_Maldivas">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BC11" />
       <method v="2">
@@ -67,8 +68,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CPs" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BC11" />
+    <configuration name="CPsJoaquin.CP09_viaje_a_Maldivas" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="tests.*" />
@@ -76,8 +77,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CPs" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="tests.CPsJoaquin" />
+      <option name="METHOD_NAME" value="CP09_viaje_a_Maldivas" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CPsJoaquin.CP10_viaje_a_Maldivas2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CPsJoaquin" />
+      <option name="METHOD_NAME" value="CP10_viaje_a_Maldivas2" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -95,6 +115,24 @@
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.CPsRodolfo" />
       <option name="METHOD_NAME" value="CP015_Registro_Viaje_En_Tren" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CPsRodolfo.CP016_Ingreso_Dia_Fallido" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CPsRodolfo" />
+      <option name="METHOD_NAME" value="CP016_Ingreso_Dia_Fallido" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -120,30 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CPs.CP002_Registro_Fallido_Password_Corta" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BC11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CPs" />
-      <option name="METHOD_NAME" value="CP002_Registro_Fallido_Password_Corta" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CPsJoaquin.CP09_viaje_a_Maldivas" />
+        <item itemvalue="TestNG.CPsJoaquin.CP10_viaje_a_Maldivas2" />
         <item itemvalue="TestNG.CPsRodolfo.CP015_Registro_Viaje_En_Tren" />
+        <item itemvalue="TestNG.CPsRodolfo.CP016_Ingreso_Dia_Fallido" />
         <item itemvalue="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco" />
-        <item itemvalue="TestNG.CPs" />
-        <item itemvalue="TestNG.CPs.CP002_Registro_Fallido_Password_Corta" />
       </list>
     </recent_temporary>
   </component>
