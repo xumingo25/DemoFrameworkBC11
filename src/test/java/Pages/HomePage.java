@@ -12,7 +12,6 @@ public class HomePage extends BaseClass {
     By locatorBtnHoteles = By.xpath(("//a[contains(text(), 'Hoteles')]")); //locator del boton Hoteles
     By locatorBtnVueloMasHotel = By.xpath("//a[contains(text(), 'Vuelo + Hotel')]");
     By LocatorCookies = By.xpath(("//button[contains(text(),'Rechazar')]")); //locator del boton rechazar cookies
-
     By locatorBtnLogin = By.xpath("//button/p" );
     By locatorInputEmailLogin = By.name("email");
     By locatorInputPasswordLogin = By.name("password");

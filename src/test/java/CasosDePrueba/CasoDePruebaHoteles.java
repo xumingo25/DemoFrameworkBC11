@@ -8,6 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
+import Pages.HomePage;
+import Pages.HotelPage;
+import Pages.VuelosPage;
 
 import java.util.ArrayList;
 

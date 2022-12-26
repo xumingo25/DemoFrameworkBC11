@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="34a37b47-89ed-4c1d-8230-18df7a8a273b" name="Changes" comment="">
 
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Testeando el push" />
 
@@ -13,6 +14,8 @@
 
     <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Testeando el push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" afterDir="false" />
 
     </list>
 

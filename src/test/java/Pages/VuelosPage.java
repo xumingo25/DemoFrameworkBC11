@@ -2,7 +2,9 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import utils.BaseClass;
+
 
 public class VuelosPage extends BaseClass {
     public VuelosPage(WebDriver driver) {
@@ -11,21 +13,92 @@ public class VuelosPage extends BaseClass {
     By locatorBtnVueloIda = By.xpath(("//div[contains(text(),'Solo ida')]"));
     By locatorSeleccionarOrigen= By.id("mui-1");
     By locatorSeleccionarDestino= By.id("mui-2");
-    By locatorSeleccionarFechaDeIda= By.xpath(("//label[contains(text(),´Fecha de ida')]"));
-    By locatorCambiarAlMesSiguiente= By.xpath(("//button[@aria-label=´Next month´]"));
+    By locatorSeleccionarFechaDeIda= By.xpath(("//label[contains(text(),'Fecha de ida')]"));
+    By locatorCambiarAlMesSiguiente= By.xpath(("//button[@aria-label='Next month']"));
     By locatorSeleccionarDia= By.xpath(("//button[contains(text(),6)]"));
+
+    By locatorSeleccionarDiaVuelta= By.xpath(("//button[contains(text(),16)]"));
     By locatorSeleccionarViajero=By.xpath(("//span[contains(text(),'1 viajero')]"));
-    By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Turista')]"));
+    By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Cualquier clase')]"));
+
     By locatorSeleccionarBuscar=By.xpath(("//Button[contains(text(),'Buscar')]"));
 
+    By locatorFiltrarBarato=By.xpath(("//div[contains(text(),'Más barato')]"));
+
+    By locatorElegirVuelo=By.xpath(("//span[contains(text(),'387,99')]"));
+
+    By locatorElegirOpcionFlexible=By.xpath(("//button[contains(text(),'Elegir Flexible')]"));
+
+    By locatorVerDetalle=By.xpath(("//button[contains(text(),'ver detalles')]"));
+    //Lineas para Nacho (Desde 28 hasta 58)
+    By locatorBtnVueloIdaYVuelta = By.xpath(("//div[contains(text(),'Ida y vuelta')]"));
+
+    By locatorClearButton = By.xpath(("//div[@role='button']"));
+
+    By locatorSeleccionarFechaDeVuelta= By.xpath(("//label[contains(text(),'Fecha de vuelta')]"));
 
 
 
-    public void seleccionarVueloIda(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //(Aca se termina las lineas de Nacho)
+    //Lineas para Jeni
+    By locatorSeleccionarClaseOpcion=By.xpath(("//span[contains(text(),'Turista')]"));
+    By locatorSeleccionarOrigenOpcion=By.xpath(("//span[contains(text(),'Ciudad de México Todos los aeropuertos')]"));
+    public void SeleccionarClaseOpcion(){
+        click(esperarAElementoWeb(locatorSeleccionarClaseOpcion)); }
+    public void SeleccionarOrigenOpcion(){
+        click(esperarAElementoWeb(locatorSeleccionarOrigenOpcion));}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Aca se acaban las lineas de Jeni
+
+
+    public void SeleccionarVueloIda(){
         click(esperarAElementoWeb(locatorBtnVueloIda));
     }
     public void SeleccionarOrigen(String ciudadOrigen){
         click(esperarAElementoWeb(locatorSeleccionarOrigen));
+        click(esperarAElementoWeb(locatorClearButton));
         agregarTexto(esperarAElementoWeb(locatorSeleccionarOrigen),ciudadOrigen);
     }
     public void SeleccionarDestino(String ciudadDestino){
@@ -50,8 +123,79 @@ public class VuelosPage extends BaseClass {
     public void SeleccionarBuscar(){
         click(esperarAElementoWeb(locatorSeleccionarBuscar));
     }
+    public void FiltrarBarato(){
+        click(esperarAElementoWeb(locatorFiltrarBarato));
+    }
+    public void ElegirVuelo(){click(esperarAElementoWeb(locatorElegirVuelo));
+    }
+    public void ElegirOpcionFlexible(){click(esperarAElementoWeb(locatorElegirOpcionFlexible));
+    }
+    public void VerDetalle(){click(esperarAElementoWeb(locatorVerDetalle));
+    }
+    //Lineas para nacho (desde 100 hasta 130)
+    public void SeleccionarIdaYVuelta(){
+        click(esperarAElementoWeb(locatorBtnVueloIdaYVuelta));
+    }
+    public void SeleccionarFechaVuelta(){
+        click(esperarAElementoWeb(locatorSeleccionarFechaDeVuelta));
+    }
+
+    public void SeleccionarDiaVuelta(){
+        click(esperarAElementoWeb(locatorSeleccionarDiaVuelta));
+    }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Aca se acaban las lineas de Nacho
+
+    //Lineas para Jeni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Aca se acaban las lineas de Jeni
 }
-
-
