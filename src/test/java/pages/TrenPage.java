@@ -68,7 +68,6 @@ public class TrenPage extends BaseClass {
     By locatorBtnReservar = By.xpath("//button[@data-test='submit-button']");
 
 
-
     public int contadorPasajerosAdultos(){
 
         WebElement locatorContadorPasajerosAdultos = buscarElementoWeb(By.xpath("//div[contains(text(),'Adultos')]//parent::div//parent::div//following-sibling::span"));

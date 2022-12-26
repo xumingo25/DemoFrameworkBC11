@@ -65,12 +65,6 @@ public class CPsHoteles {
 
         Assert.assertTrue(resultadoObtenido.contains("https://inspirame.rumbo.es"));
 
-
-
-
-
-
-
     }
     @Test
     public void CP0002_Validar_Resultado(){
@@ -88,7 +82,7 @@ public class CPsHoteles {
 
     public void postTests(){
 
-        hotelesPage.cerrarBrowser();
+        //hotelesPage.cerrarBrowser();
 
     }
 
