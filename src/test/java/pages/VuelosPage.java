@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import utils.BaseClass;
 
 public class VuelosPage extends BaseClass {
@@ -39,6 +40,11 @@ public class VuelosPage extends BaseClass {
     By locatorBtnSeleccionPlus = By.xpath("//button[@data-testid='select-plus-button']");
     By locatorRBSeguroProteccionTotal = By.xpath("(//div[@class='insurance__proposal'])[1]");
     By locatorBtnSiguientePago =By.xpath("//button[@data-test='lead-generation-submit-btn']");
+    By locatorTxtInicioSesion = By.xpath("//div[contains(text(),'Iniciar sesión')]");
+    By locatorMsjErrorCompra = By.xpath("//div[contains(text(), 'Lo sentimos')]");
+    By locatorDetalleVuelo = By.xpath("//div[contains(text(),'vuelo de ida')]");
+    By locatorDiseniaTuviaje = By.xpath("//span[contains(text(),'Diseña tu viaje añadiendo los servicios que necesites')]");
+    By locatorBtnProtegeEquipaje = By.xpath("//div[@class='brb-right-box']");
 
     //Localizadores Formulario ¿Quién reserva?
     By locatorTxtNombre = By.xpath("//input[@data-test='input-name']");
@@ -51,32 +57,32 @@ public class VuelosPage extends BaseClass {
     By locatorRBH1Genero =By.xpath("(//span[contains(text(),'Sr.')])[1]");
     By locatorH1Nombre = By.xpath("(//input[@class='form-control text-input '])[3]");
     By locatorH1Apellido = By.xpath("(//input[@class='form-control text-input '])[4]");
-    By locatorH1DiaNac = By.xpath("(//div[@data-test='date-day-input'])[1]");
+    By locatorH1DiaNac = By.xpath("(//input[@placeholder='DD'])[1]");
     By locatorH1MesNac = By.xpath("(//div[@data-test='date-month-input'])[1]");
     By locatorH1SeleccionMesNac = By.xpath("(//option[@value='3'])[1]");
-    By locatorH1AnioNac = By.xpath("(//div[@data-test='date-year-input'])[1]");
+    By locatorH1AnioNac = By.xpath("(//input[@placeholder='AAAA'])[1]");
 
     //Huesped 2
     By locatorRBH2Genero =By.xpath("(//span[contains(text(),'Sra.')])[2]");
     By locatorH2Nombre = By.xpath("(//input[@class='form-control text-input '])[5]");
     By locatorH2Apellido = By.xpath("(//input[@class='form-control text-input '])[6]");
-    By locatorH2DiaNac = By.xpath("(//div[@data-test='date-day-input'])[2]");
+    By locatorH2DiaNac = By.xpath("(//input[@placeholder='DD'])[2]");
     By locatorH2MesNac = By.xpath("(//div[@data-test='date-month-input'])[2]");
     By locatorH2SeleccionMesNac = By.xpath("(//option[@value='6'])[2]");
-    By locatorH2AnioNac = By.xpath("(//div[@data-test='date-year-input'])[2]");
+    By locatorH2AnioNac = By.xpath("(//input[@placeholder='AAAA'])[2]");
 
     //Huesped 3
     By locatorRBH3Genero =By.xpath("(//span[contains(text(),'Sra.')])[3]");
     By locatorH3Nombre = By.xpath("(//input[@class='form-control text-input '])[7]");
     By locatorH3Apellido = By.xpath("(//input[@class='form-control text-input '])[8]");
-    By locatorH3DiaNac = By.xpath("(//div[@data-test='date-day-input'])[3]");
+    By locatorH3DiaNac = By.xpath("(//input[@placeholder='DD'])[3]");
     By locatorH3MesNac = By.xpath("(//div[@data-test='date-month-input'])[3]");
     By locatorH3SeleccionMesNac = By.xpath("(//option[@value='10'])[3]");
-    By locatorH3AnioNac = By.xpath("(//div[@data-test='date-year-input'])[3]");
+    By locatorH3AnioNac = By.xpath("(//input[@placeholder='AAAA'])[3]");
 
     //Formulario ¿Cómo desea pagar?
-    By locatorTxtTitularTarjeta = By.xpath("(//div[@class='input-addon'])[1]");
-    By locatorTxtNroTarjeta = By.xpath("(//div[@class='input-addon'])[2]");
+    By locatorTxtTitularTarjeta = By.xpath("//input[@name='creditCard.cardHolder']");
+    By locatorTxtNroTarjeta = By.xpath("//input[@name='creditCard.cardNumber']");
     By locatorTxtMesCaducidad = By.xpath("(//input[@name='creditCard.expirationDate'])[1]");
     By locatorTxtAnioCaducidad = By.xpath("(//input[@name='creditCard.expirationDate'])[2]");
     By locatorTxtCVV = By.xpath("//input[@name='creditCard.cvv']");
@@ -95,7 +101,7 @@ public class VuelosPage extends BaseClass {
     By locatorTxtCorreoBoleta = By.xpath("//input[@name='customer.email']");
     By locatorBtnCodTelefonoBoleta = By.xpath("(//div[@class='selected-dial-code'])[2]");
     By locatorSeleccionCodTelefono = By.xpath("(//li[@data-country-code='cl'])[3]");
-    By locatorTxtNroTelefonoBoleta = By.xpath("//input[@name='business.phone']");
+    By locatorTxtNroTelefonoBoleta = By.xpath("//input[@name='customer.phone']");
     By locatorBtnReservaAhora = By.xpath("//button[@data-test='submit-button']");
 
     public void completarBusqueda_OrigenDestino_Incorrectos(String origen, String destino){
@@ -146,6 +152,33 @@ public class VuelosPage extends BaseClass {
         click(locatorBtnBuscar);
         esperarXSegundos(2000);
     }
+    public void completarBusquedaFormReserva (String origen, String destino){
+        esperarXSegundos(2000);
+        click(locatorClearOrigen);
+        esperarXSegundos(1000);
+        agregarTexto(esperarAElementoWeb(locatorTxtOrigen),origen);
+        esperarXSegundos(4000);
+        click(locatorOptOrigen);
+        esperarXSegundos(1000);
+        agregarTexto(esperarAElementoWeb(locatorTxtDestino),destino);
+        esperarXSegundos(4000);
+        click(locatorOptDestino);
+        esperarXSegundos(1000);
+        click(locatorMesSiguiente);
+        esperarXSegundos(1000);
+        click(locatorFechaIda);
+        esperarXSegundos(3000);
+        click(locatorFechaVuelta);
+        esperarXSegundos(3000);
+        click(locatorAumentoViajeros);
+        esperarXSegundos(1000);
+        click(locatorBtnClase);
+        esperarXSegundos(1000);
+        click(locatorOptClase);
+        esperarXSegundos(1000);
+        click(locatorBtnBuscar);
+        esperarXSegundos(2000);
+    }
     public void seleccionVueloPreseleccionado(){
         esperarXSegundos(10000);
         click(locatorBtnViajePreseleccionado);
@@ -180,11 +213,16 @@ public class VuelosPage extends BaseClass {
         click(locatorOptClase);
         esperarXSegundos(1000);
         click(locatorBtnVueloHotel);
-        esperarXSegundos(13000);
-        //
+        esperarXSegundos(2000);
+    }
+    public void ResultadosBusquedaHotel(){
+        esperarXSegundos(20000);
         click(locatorBtnMejorValorado);
         esperarXSegundos(5000);
         click(locatorOptHotel);
+        esperarXSegundos(2000);
+    }
+    public void ResultadosHabitacion(){
         esperarXSegundos(2000);
         click(locatorBtnHabitaciones);
         esperarXSegundos(10000);
@@ -201,7 +239,8 @@ public class VuelosPage extends BaseClass {
         esperarXSegundos(10000);
         click(locatorSeleccionAlojamiento);
         esperarXSegundos(10000);
-        //
+    }
+    public void seleccionHabitacion_VueloHotel(){
         click(locatorBtnHabitaciones);
         esperarXSegundos(1000);
         click(locatorBtnSeleccionHabitacion);
@@ -261,7 +300,7 @@ public class VuelosPage extends BaseClass {
         agregarTexto(esperarAElementoWeb(locatorH3Nombre),nameH3);
         esperarXSegundos(1000);
         agregarTexto(esperarAElementoWeb(locatorH3Apellido),surnameH3);
-        esperarXSegundos(1000);
+        esperarXSegundos(2000);
         agregarTexto(esperarAElementoWeb(locatorH3DiaNac),dianacH3);
         esperarXSegundos(1000);
         click(locatorH3MesNac);
@@ -275,8 +314,12 @@ public class VuelosPage extends BaseClass {
         esperarXSegundos(2000);
         click(locatorRBSeguroProteccionTotal);
         esperarXSegundos(2000);
+        ScrollElementoWeb(locatorBtnSiguientePago);
+        esperarXSegundos(2000);
         click(locatorBtnSiguientePago);
-        esperarXSegundos(4000);
+        esperarXSegundos(5000);
+        ScrollElementoWeb(locatorTxtTitularTarjeta);
+        esperarXSegundos(2000);
         agregarTexto(esperarAElementoWeb(locatorTxtTitularTarjeta), titulartarjeta);
         esperarXSegundos(1000);
         agregarTexto(esperarAElementoWeb(locatorTxtNroTarjeta), nrotarjeta);
@@ -312,21 +355,50 @@ public class VuelosPage extends BaseClass {
         esperarXSegundos(2000);
         agregarTexto(esperarAElementoWeb(locatorTxtCorreoBoleta),correo);
         esperarXSegundos(2000);
-        click(locatorBtnCodTelefonoBoleta);
-        esperarXSegundos(3000);
-        click(locatorSeleccionCodTelefono);
-        esperarXSegundos(2000);
         agregarTexto(esperarAElementoWeb(locatorTxtNroTelefonoBoleta),telefono);
         esperarXSegundos(2000);
         click(locatorBtnReservaAhora);
         esperarXSegundos(7000);
     }
+    By locatorPrecioNormal = By.xpath("(//div[contains(text(), 'Precio normal')])[1]");
+    By locatorElegirFlexible = By.xpath("//button[contains(text(),'Elegir Flexible')]");
+    public void seleccionReservaVuelo(){
+        esperarXSegundos(10000);
+        click(locatorPrecioNormal);
+        esperarXSegundos(20000);
+        click(locatorElegirFlexible);
+        esperarXSegundos(4000);
+    }
+    By locatorBtnSiguienteReservaVuelo = By.xpath("//button[contains(text(),'Siguiente')]");
+    public void resultadoReservaVuelo(){
+        esperarXSegundos(2000);
+        click(locatorBtnProtegeEquipaje);
+        esperarXSegundos(2000);
+        click(locatorBtnSiguienteReservaVuelo);
+        esperarXSegundos(2000);
+    }
     public String obtenerErrorOrigen(){
         return obtenerTexto(locatorTxtError_BusquedaOrigen);
     }
-    /*
-    public String obtenerViajePreseleccionado(){
 
+    public String obtenerInicioSesion(){
+        WebElement valor = driver.findElement(locatorTxtInicioSesion);
+        String texto = valor.getText();
+        return texto;
     }
-    */
+    public String obtenerViajePreseleccionado(){
+        WebElement valor = driver.findElement(locatorDetalleVuelo);
+        String texto = valor.getText();
+        return texto;
+    }
+    public String obtenerErrorCompra(){
+        WebElement valor = driver.findElement(locatorMsjErrorCompra);
+        String texto = valor.getText();
+        return texto;
+    }
+    public String obtenerDisenioDeViaje(){
+        WebElement valor = driver.findElement(locatorDiseniaTuviaje);
+        String texto = valor.getText();
+        return texto;
+    }
 }
