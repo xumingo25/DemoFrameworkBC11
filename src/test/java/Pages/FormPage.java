@@ -41,7 +41,7 @@ public class FormPage extends BaseClass {
 
 
     }
-
+//
     public String obtenerResultadoCP006(){
         esperarXSegundos(1000);
         return obtenerTexto(esperarAElementoWeb(locatorResultadoCP006));

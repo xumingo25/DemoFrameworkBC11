@@ -71,6 +71,7 @@ public class CasoDePruebaHoteles {
         SearchPage.ElegirPrimeraOpcionFoto();
 
 //El driver tiene que cambiar de TAB
+        //
         ArrayList<String> tabs2 = new ArrayList<String> (SearchPage.getDriver().getWindowHandles());
         SearchPage.getDriver().switchTo().window(tabs2.get(1));
 

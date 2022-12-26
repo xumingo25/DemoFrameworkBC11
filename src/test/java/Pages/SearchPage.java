@@ -41,6 +41,6 @@ public class SearchPage extends BaseClass {
         click(esperarAElementoWeb(locatorSoloAlojamiento));
     }
 
-
+//
 
 }
