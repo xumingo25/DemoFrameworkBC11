@@ -102,16 +102,27 @@ public class CasosDePruebaTrenes {
         trenPage.boletoSoloIda();
         trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
         trenPage.completarFormularioSoloIda();
-        //trenPage.aumentarViajero();
         trenPage.clickBuscar();
         trenPage.clickPrimerPasaje();
         trenPage.formularioQuienReserva("Ariana","Niesi","ariananiesi@gmail.com","1157966485","13","1999");
-        // completar formulario quién viaja
-        // completar formulario cómo deseas pagar
-
+        trenPage.formularioMetodoDePago("Ariana Micol Niesi","4051885600446623","11","22","123");
+        Assert.assertEquals(trenPage.resultadoObtenidoTarjetaVencida(),"Tu tarjeta ha caducado");
         }
+
         @Test
         public void CP012_BusquedaTrenes_TarjetaSinFondos() {
+            homePage.aceptarCookies();
+            homePage.irATrenes();
+            trenPage.boletoSoloIda();
+            trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
+            trenPage.completarFormularioSoloIda();
+            trenPage.clickBuscar();
+            trenPage.clickPrimerPasaje();
+            trenPage.formularioQuienReserva("Ariana","Niesi","ariananiesi@gmail.com","1157966485","13","1999");
+            trenPage.formularioMetodoDePago("Ariana Micol Niesi","4051885600446623","11","23","123");
+            trenPage.clickReservar();
+            trenPage.continuarSinFlex();
+            Assert.assertEquals(trenPage.resultadoObtenidoTarjetaSinFondos(),"Lo sentimos");
 
         }
 

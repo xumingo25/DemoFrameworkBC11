@@ -55,6 +55,19 @@ public class TrenPage extends BaseClass {
     By locatorPaquetePremium = By.xpath("//b[contains(text(),'Paquete de Servicio Premium')]");
     By locatorBtnSiguiente = By.xpath("//button[contains(text(),'Siguiente')]");
 
+    //locators pago
+    By locatorTxtTitularTarjeta = By.xpath("//input[@name= 'creditCard.cardHolder']");
+    By locatorTxtNroTarjeta = By.xpath("//input[@name='creditCard.cardNumber']");
+    By locatorTxtMesCaducidad = By.xpath("//input[@placeholder='MM']");
+    By locatorTxtAnioCaducidad = By.xpath("//input[@placeholder='AA']");
+    By locatorTxtCVV = By.xpath("//input[@name='creditCard.cvv']");
+    By locatorErrorTarjetaVencida = By.xpath("//div[contains(text(),'Tu tarjeta ha caducado')]");
+    By locatorContinuarSinFlex = By.xpath("//span[@class='btn insurance-modal__deny-button  btn-link underlined']");
+    By locatorErrorTarjetaSinFondos = By.xpath("//div[contains(text(),'Lo sentimos')]");
+    By locatorScrollBtnAplicar = By.xpath("//div[contains(text(),'Aplicar')]");
+    By locatorBtnReservar = By.xpath("//button[@data-test='submit-button']");
+
+
 
     public int contadorPasajerosAdultos(){
 
@@ -219,10 +232,58 @@ public class TrenPage extends BaseClass {
         esperarXSegundos(1000);
         click(locatorBtnSiguiente);
 
-
+    }
+    public void clickJs(String locator){
+        esperarXSegundos(5000);
+        WebElement element = driver.findElement(By.xpath(locator));
+        JavascriptExecutor executor = (JavascriptExecutor) driver;
+        executor.executeScript("arguments[0].click()", element);
     }
 
+    public void formularioMetodoDePago(String titulartarjeta, String nrotarjeta, String mescaducidad, String aniocaducidad, String cvv) {
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtTitularTarjeta), titulartarjeta);
+        esperarXSegundos(2000);
+        //clickJs("//input[@name='creditCard.cardNumber']");
+        click(locatorTxtNroTarjeta);
+        esperarXSegundos(2000);
+        click(locatorTxtNroTarjeta);
+        agregarTexto(esperarAElementoWeb(locatorTxtNroTarjeta), nrotarjeta);
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtMesCaducidad), mescaducidad);
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtAnioCaducidad), aniocaducidad);
+        esperarXSegundos(2000);
+        agregarTexto(esperarAElementoWeb(locatorTxtCVV), cvv);
+        esperarXSegundos(2000);
+    }
+    public void clickReservar(){
+        ScrollElementoWeb(locatorTxtCVV);
+        ScrollElementoWeb(locatorScrollBtnAplicar);
+        click(locatorBtnReservar);
+        esperarXSegundos(5000);
+    }
+
+    public void continuarSinFlex(){
+        click(locatorContinuarSinFlex);
+        esperarXSegundos(6000);
+    }
+        public String resultadoObtenidoTarjetaVencida(){
+        WebElement valor = driver.findElement(locatorErrorTarjetaVencida);
+        String texto = valor.getText();
+        return texto;
+       }
+       public String resultadoObtenidoTarjetaSinFondos(){
+        WebElement valor = driver.findElement(locatorErrorTarjetaSinFondos);
+        String texto = valor.getText();
+        return texto;
+       }
 
 }
+
+
+
+
+
 
 
