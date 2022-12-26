@@ -45,6 +45,7 @@ public class VuelosPage extends BaseClass {
     By locatorDetalleVuelo = By.xpath("//div[contains(text(),'vuelo de ida')]");
     By locatorDiseniaTuviaje = By.xpath("//span[contains(text(),'Diseña tu viaje añadiendo los servicios que necesites')]");
     By locatorBtnProtegeEquipaje = By.xpath("//div[@class='brb-right-box']");
+    By locatorErrorMismoOrigenDestino = By.xpath("//span[contains(text(), 'El destino')]");
 
     //Localizadores Formulario ¿Quién reserva?
     By locatorTxtNombre = By.xpath("//input[@data-test='input-name']");
@@ -398,6 +399,11 @@ public class VuelosPage extends BaseClass {
     }
     public String obtenerDisenioDeViaje(){
         WebElement valor = driver.findElement(locatorDiseniaTuviaje);
+        String texto = valor.getText();
+        return texto;
+    }
+    public String obtenerErrorMismoOrigenYDestino(){
+        WebElement valor = driver.findElement(locatorErrorMismoOrigenDestino);
         String texto = valor.getText();
         return texto;
     }

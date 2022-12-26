@@ -42,8 +42,11 @@ public class CasosDePruebaVuelos {
     }
 
     @Test
-    public void CP001_RegistroNuevoUsuario_SinCorreoConfirmacion(){
+    public void CP001_BusquedaVuelo_MismoOrigen_Y_Destino(){
         homePage.aceptarCookies();
+        homePage.irAVuelos();
+        vuelosPage.completarBusquedaFormReserva("Madrid","Madrid");
+        Assert.assertEquals("El destino coincide con el origen",vuelosPage.obtenerErrorMismoOrigenYDestino());
     }
 
     @Test
