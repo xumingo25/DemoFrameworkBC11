@@ -44,7 +44,14 @@ public class CasoDePruebaHoteles {
 
     //HOTELES TESTS
 
+    @Test
+    public void CP001_Busqueda_De_Alojamiento(){
+        HomePage.BtnRechazar();
+        HomePage.BtnHoteles();
+        HotelPage.CompletarHoteles("Barcelona",28,29);
+        Assert.assertEquals(HotelPage.obtenerResultadoCP001(),"300+ resultados encontrados para 27 feb - 28 mar");
 
+    }
 
     @Test
     public void CP002_Busqueda_De_Paquetes_Disponibles(){
@@ -54,6 +61,17 @@ public class CasoDePruebaHoteles {
         HotelPage.CompletarVueloMasHoteles("eze", "madrid", 10, 17);
         Assert.assertEquals(HotelPage.obtenerResultadoCP002(),"Paquete Vuelo + Hotel para Madrid");
     }
+
+    @Test
+    public void CP003_Elegir_Alojamiento(){
+        HomePage.BtnRechazar();
+        /*HomePage.irALogin();
+        HomePage.CompletarLogin("Lautaro.coria@tsoftglobal.com","123456");*/
+        HomePage.BtnHoteles();
+        HotelPage.CompletarHoteles("Barcelona",28,29);
+        HotelPage.BtnSeleccionAloj();
+        Assert.assertEquals(HotelPage.obtenerResultadoCP003(),"Elige habitación y régimen");
+    }
     @Test
     public void CP004_Busqueda_Hoteles_Cambio_Lugar(){
         HomePage.BtnRechazar();
@@ -61,6 +79,20 @@ public class CasoDePruebaHoteles {
         HotelPage.CompletarHoteles("Barcelona", 10, 17);
         SearchPage.RealizarCambiosBusquedaLugar("Barcelona", "Costa Blanca");
         Assert.assertEquals(HotelPage.obtenerResultadoCP004(),"Alojamientos en Costa Blanca");
+    }
+
+    @Test
+    public void CP005_Buscar_Opciones_Disponibles_Tren_Mas_Hotel(){
+        HomePage.BtnRechazar();
+        HomePage.BtnHoteles();
+        HotelPage.irATrenHotel();
+        HotelPage.CompletarTrenMasHotel("","",28,29);
+        HotelPage.BtnSeleccionAloj();
+
+
+
+
+
     }
 
     @Test

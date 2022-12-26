@@ -17,6 +17,7 @@ public class HomePage extends BaseClass {
     By locatorInputPasswordLogin = By.name("password");
     By locatorSubmitLogin = By.xpath("//button[contains(text(),'Iniciar sesión')]");
     By locatorBtnVuelos = By.xpath("//a[@title='Vuelos']" );
+
     /*
     LOCALIZADORES
     ----------------------------------------------

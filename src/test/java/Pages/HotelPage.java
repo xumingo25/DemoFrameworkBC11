@@ -18,6 +18,7 @@ public class HotelPage extends BaseClass {
     By locatorSubmitBuscar = By.xpath("//button[contains(text(),'Buscar')]");
 
     By locatorBtnVueloMasHotel = By.xpath("//span[contains(text(),'Vuelo + Hotel')]");
+    By locatorBtnTrenHotel = By.xpath("//button[@aria-label='Tren + Hotel']");
 
 
         //Clickea Vuelos+Hoteles dentro de la pagina de Hoteles
@@ -58,8 +59,6 @@ public class HotelPage extends BaseClass {
     }
 
 
-
-
     By locatorSeleccionarOrigen= By.id("mui-1");
     By locatorPincharOrigen= By.xpath("//li[@id='mui-1-option-0']");
     By locatorSeleccionarDestino= By.id("mui-2");
@@ -70,6 +69,18 @@ public class HotelPage extends BaseClass {
 
     By locatorClase = By.xpath("//span[contains(text(),'Cualquier clase')]");
     By locatorOpClase = By.xpath("//span[contains(text(),'Turista')]");
+
+    //Formulario Tren + Hotel
+    By locatorSeleccionarOrigenhotel= By.id("fromPlace");
+    By locatorPincharOrigenh= By.xpath("//span[contains(text(),'A Coruña')]");
+    By locatorSeleccionarDestinohotel= By.id("ToPlace");
+    By locatorPincharDestinoh= By.xpath("//span[contains(text(),'Barcelona')]");
+    By locatorSeleccionarFechaDeIdah= By.xpath("//label[contains(text(),'Fecha de ida')]");
+
+
+    public void irATrenHotel(){click(esperarAElementoWeb(locatorBtnTrenHotel));}
+
+    By locatorBtnSeleccionAloj=By.xpath("//a[@class='sc-fEXmlR hMqBms']");
 
 
     public void CompletarVueloMasHoteles (String LugarOrigen, String LugarDestino, int FechaIda, int FechaVuelta){
@@ -128,17 +139,60 @@ public class HotelPage extends BaseClass {
 
     }
 
+    public void CompletarTrenMasHotel(String LugarOrigen, String LugarDestino, int FechaIda, int FechaVuelta){
 
+        agregarTexto(esperarAElementoWeb(locatorSeleccionarOrigenhotel), LugarOrigen);
+        esperarXSegundos(2000);
+        click(esperarAElementoWeb(locatorPincharOrigenh));
 
+        click(esperarAElementoWeb(locatorSeleccionarDestinohotel));
+        agregarTexto(esperarAElementoWeb(locatorSeleccionarDestinohotel), LugarDestino);
+        esperarXSegundos(2000);
+        click(esperarAElementoWeb(locatorPincharDestinoh));
+        esperarXSegundos(1000);
 
+        click(esperarAElementoWeb(locatorSeleccionarFechaDeIdah));
+        esperarXSegundos(5000);
+        click(esperarAElementoWeb(locatorSeleccionarFechaDeIdah));
+        esperarXSegundos(1000);
 
+        click(locatorMesSiguiente);
+        esperarXSegundos(1000);
+        By locatorSeleccionarDia1= By.xpath("//button[contains(text(),"+ FechaIda +")]");
+        click(esperarAElementoWeb(locatorSeleccionarDia1));
+
+        esperarXSegundos(1000);
+
+        By locatorSeleccionarDia2= By.xpath("//button[contains(text(),"+ FechaVuelta +")]");
+        click(esperarAElementoWeb(locatorSeleccionarDia2));
+
+        esperarXSegundos(1000);
+        click(esperarAElementoWeb(locatorSubmitBuscar));
+
+    }
+
+    By locatorResultadoCpAloj = By.xpath("//div[contains(text(),'300+ resultados encontrados ')]");
     By locatorResultadoCP001 = By.xpath("//div[contains(text(),'Alojamientos en Costa Blanca')]"); //mover a una page de resultados
     By locatorResultadoCP002 = By.xpath("//div[contains(text(),'Paquete Vuelo + Hotel')]");
+    By locatorResultadoCP003 = By.xpath("//h2[contains(text(),'Elige habitación y régimen')]");
 
+
+
+    //Seleccion Alojamiento
+    public void BtnSeleccionAloj(){click(esperarAElementoWeb(locatorBtnSeleccionAloj));}
+    public String obtenerResultadoCP001(){
+        esperarXSegundos(1000);
+        return obtenerTexto(esperarAElementoWeb(locatorResultadoCpAloj));
+    }
 
     public String obtenerResultadoCP002(){
         esperarXSegundos(1000);
         return obtenerTexto(esperarAElementoWeb(locatorResultadoCP002));
+    }
+
+    public String obtenerResultadoCP003(){
+        esperarXSegundos(1000);
+        return obtenerTexto(esperarAElementoWeb(locatorResultadoCP003));
     }
 
     public String obtenerResultadoCP004(){
