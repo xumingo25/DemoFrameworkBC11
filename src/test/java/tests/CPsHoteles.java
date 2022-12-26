@@ -82,7 +82,7 @@ public class CPsHoteles {
 
     public void postTests(){
 
-        hotelesPage.cerrarBrowser();
+        //hotelesPage.cerrarBrowser();
 
     }
 

@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,8 +33,12 @@ public class TrenPage extends BaseClass {
     By locatorFIda=By.xpath("//button[contains(text(),14)]");
     By locatorFVuelta= By.xpath("//button[contains(text(),28)]");
 
-    public int contadorPasajerosAdultos(){
+    public void scrollFin(){
+        ((JavascriptExecutor) driver)
+                .executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
 
+    public int contadorPasajerosAdultos(){
         WebElement locatorContadorPasajerosAdultos = buscarElementoWeb(By.xpath("//div[contains(text(),'Adultos')]//parent::div//parent::div//following-sibling::span"));
         int totalPasajerosAdultos= Integer.parseInt(locatorContadorPasajerosAdultos.getText());
         System.out.println(totalPasajerosAdultos);

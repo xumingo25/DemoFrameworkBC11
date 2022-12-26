@@ -100,7 +100,10 @@ public class CasosDePruebaTrenes {
         trenPage.completarBusquedaMes();
         trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
+        String resultado1=resultadoTrenesPage.obtenerPrecio1();
         resultadoTrenesPage.modificarParametros("Albacete","Alicante");
+        String resultado2= resultadoTrenesPage.obtenerPrecio2();
+        Assert.assertNotEquals(resultado1,resultado2);
 
     }
     @Test
@@ -110,6 +113,13 @@ public class CasosDePruebaTrenes {
     @Test
     public void CP012_BusquedaTrenes_TarjetaSinFondos() {
 
+    }
+
+    @Test
+    public void CPprueba(){
+        homePage.aceptarCookies();
+        homePage.irATrenes();
+        trenPage.scrollFin();
     }
 
 

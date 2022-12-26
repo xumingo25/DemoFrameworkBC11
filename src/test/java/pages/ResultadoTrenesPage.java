@@ -16,14 +16,16 @@ public class ResultadoTrenesPage extends BaseClass {
     By locatorPrecioMasBarato = By.xpath("//section[@data-role='results']//following::span[1][@size=24]");
     By locatorPrecioMasBaratoHead = By.xpath("//ul[@role='tablist']/li[2]/div[@class='sorting-tabs-view__amount']");
     By locatorBtnModificar = By.xpath("//span[contains(text(),'Modificar')]");
-    By locatorSeleccionarNuevoOrigen= By.xpath("//input[@id='fromPlace']");
+    By locatorSeleccionarNuevoOrigen = By.xpath("//input[@id='fromPlace']");
     By locatorIngresarNuevoDestino = By.xpath("//input[@id=\"toPlace\"]");
     By locatorRBNuevoOrigen = By.xpath("//section//child::button");
     By locatorClickNuevoDestino = By.xpath("//div[@role=\"option\"]");
-    By locatorFIda=By.xpath("//button[contains(text(),15)]");
-    By locatorFVuelta= By.xpath("//button[contains(text(),30)]");
+    By locatorFIda = By.xpath("//button[contains(text(),15)]");
+    By locatorFVuelta = By.xpath("//button[contains(text(),30)]");
     By locatorAumentarViajeros = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
     By locatorBtnBuscar = By.xpath("//button[@type= 'submit']");
+    By locatorPrecioBusqueda1 = By.xpath("//section[@data-role='results']//following::span[1][@size=24]");
+    By locatorPrecioBusqueda2 = By.xpath("//section[@data-role='results']//following::span[1][@size=24]");
 
 
     public void seleccionarBotonMasBarato() {
@@ -32,6 +34,7 @@ public class ResultadoTrenesPage extends BaseClass {
         JavascriptExecutor executor = (JavascriptExecutor) driver;
         executor.executeScript("arguments[0].click()", element);
     }
+
 
     public String obtenerValorMasBarato() {
         WebElement valorMasBarato = driver.findElement(locatorPrecioMasBarato);
@@ -44,22 +47,21 @@ public class ResultadoTrenesPage extends BaseClass {
         esperarXSegundos(4000);
         WebElement valorMasBaratoHead = driver.findElement(locatorPrecioMasBaratoHead);
         String prueba = valorMasBaratoHead.getText();
-        String prueba2 = valorMasBaratoHead.getAttribute("value");
         return prueba;
         //     return (String) executor.executeScript("arguments[0].textContent()",valorMasBaratoHead);
     }
 
-    public void modificarParametros(String origen, String destino){
+    public void modificarParametros(String origen, String destino) {
         esperarXSegundos(5000);
         click(locatorBtnModificar);
         esperarXSegundos(2000);
         click(buscarElementoWeb(locatorSeleccionarNuevoOrigen));
         esperarXSegundos(2000);
-        agregarTexto(locatorSeleccionarNuevoOrigen,origen);
+        agregarTexto(locatorSeleccionarNuevoOrigen, origen);
         esperarXSegundos(2000);
         click(locatorRBNuevoOrigen);
         esperarXSegundos(2000);
-        agregarTexto(locatorIngresarNuevoDestino,destino);
+        agregarTexto(locatorIngresarNuevoDestino, destino);
         esperarXSegundos(2000);
         click(locatorClickNuevoDestino);
         esperarXSegundos(2000);
@@ -70,8 +72,22 @@ public class ResultadoTrenesPage extends BaseClass {
         click(locatorAumentarViajeros);
         esperarXSegundos(2000);
         click(locatorBtnBuscar);
+    }
 
+    public String obtenerPrecio1() {
+        esperarXSegundos(6000);
+        WebElement precioBusqueda1 = driver.findElement(locatorPrecioBusqueda1);
+        String precioFinal = precioBusqueda1.getText();
+        System.out.println(precioFinal);
+        return precioFinal;
 
+    }
 
+    public String obtenerPrecio2() {
+        esperarXSegundos(7000);
+        WebElement precioBusqueda2 = driver.findElement(locatorPrecioBusqueda2);
+        String precioFinal = precioBusqueda2.getText();
+        System.out.println(precioFinal);
+        return precioFinal;
     }
 }
