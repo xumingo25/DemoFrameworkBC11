@@ -11,8 +11,8 @@ public class VuelosPage extends BaseClass {
     By locatorBtnVueloIda = By.xpath(("//div[contains(text(),'Solo ida')]"));
     By locatorSeleccionarOrigen= By.id("mui-1");
     By locatorSeleccionarDestino= By.id("mui-2");
-    By locatorSeleccionarFechaDeIda= By.xpath(("//label[contains(text(),´Fecha de ida')]"));
-    By locatorCambiarAlMesSiguiente= By.xpath(("//button[@aria-label=´Next month´]"));
+    By locatorSeleccionarFechaDeIda= By.xpath(("//label[contains(text(),'Fecha de ida')]"));
+    By locatorCambiarAlMesSiguiente= By.xpath(("//button[@aria-label='Next month']"));
     By locatorSeleccionarDia= By.xpath(("//button[contains(text(),6)]"));
     By locatorSeleccionarViajero=By.xpath(("//span[contains(text(),'1 viajero')]"));
     By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Turista')]"));
