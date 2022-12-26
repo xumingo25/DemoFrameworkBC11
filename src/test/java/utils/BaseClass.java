@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Set;
+
 public class BaseClass {
     //Atributos
     protected WebDriver driver;
@@ -43,6 +45,7 @@ public class BaseClass {
 
     public void cargarPagina(String url){
         this.driver.get(url);
+        System.out.println("Test");
     }
 
     //Conectar el driver al browser
@@ -139,11 +142,30 @@ public class BaseClass {
         select = new Select(elemento);
         select.selectByVisibleText(texto);
     }
-
-
-
     public void cerrarBrowser(){
         this.driver.quit();
+    }
+
+    //Cambiar pestañas
+
+    public void handleTabs(){
+        String mainTab = driver.getWindowHandle();
+        String newTab = "";
+
+        System.out.println("Main Tab: "+ mainTab);
+
+        Set<String> handles= driver.getWindowHandles();
+
+        for (String actual : handles){
+            System.out.println("-- Handled ID: +" + actual);
+
+            if(!actual.equalsIgnoreCase(mainTab)){
+                System.out.println("--Changing Tab--");
+                driver.switchTo().window(actual);
+
+                newTab = actual;
+            }
+        }
     }
 
 }
