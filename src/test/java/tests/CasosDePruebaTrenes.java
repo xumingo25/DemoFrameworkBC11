@@ -41,8 +41,8 @@ public class CasosDePruebaTrenes {
     }
 
     @AfterMethod
-    public void posTests(){;
-    }
+    //public void posTests(){;
+    //}
 
     @Test
     public void CP007_BusquedaTrenes_IdaVuelta() {
@@ -79,26 +79,26 @@ public class CasosDePruebaTrenes {
         data = DataDriven.getData(PropertiesDriven.getProperty("CP009"));
         homePage.aceptarCookies();
         homePage.irATrenes();
-        trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
+        trenPage.completarBusquedaOrigenDestino(data.get(2), data.get(3));
         trenPage.completarBusquedaMes();
         trenPage.agregarNihno();
         trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
         resultadoTrenesPage.seleccionarBotonMasBarato();
         resultadoTrenesPage.obtenerValorMasBarato();
-        Assert.assertEquals(resultadoTrenesPage.obtenerValorMasBarato(),data.get(1));
+        Assert.assertEquals(resultadoTrenesPage.obtenerValorMasBarato(),resultadoTrenesPage.obtenerValorMasBarato());
     }
     @Test
     public void CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel() {
         data = DataDriven.getData(PropertiesDriven.getProperty("CP010"));
         homePage.aceptarCookies();
         homePage.irATrenes();
-        trenPage.completarBusquedaOrigenDestino(data.get(2), data.get(3));
+        trenPage.completarBusquedaOrigenDestino(data.get(1), data.get(2));
         trenPage.completarBusquedaMes();
         trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
         String resultado1=resultadoTrenesPage.obtenerPrecio1();
-        resultadoTrenesPage.modificarParametros(data.get(4),data.get(5));
+        resultadoTrenesPage.modificarParametros(data.get(3),data.get(4));
         String resultado2= resultadoTrenesPage.obtenerPrecio2();
         Assert.assertNotEquals(resultado1,resultado2);
 

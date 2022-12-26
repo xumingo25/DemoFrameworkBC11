@@ -142,10 +142,10 @@ public class TrenPage extends BaseClass {
         return url2;
     }
 
-    public int obtenerTotalPasajerosResultadoBusqueda(){
+    public String obtenerTotalPasajerosResultadoBusqueda(){
         WebElement locatorContadorPasajeros = buscarElementoWeb(By.xpath("//div[@class=\"search-summary__passsengers\"]//following-sibling::span"));
         String numeroPasajeros = locatorContadorPasajeros.getText();
-        int valor= Integer.parseInt(numeroPasajeros);
+        String valor= numeroPasajeros;
         return valor;
     }
 
@@ -259,7 +259,9 @@ public class TrenPage extends BaseClass {
     }
     public void clickReservar(){
         ScrollElementoWeb(locatorTxtCVV);
+        esperarXSegundos(3000);
         ScrollElementoWeb(locatorScrollBtnAplicar);
+        esperarXSegundos(3000);
         click(locatorBtnReservar);
         esperarXSegundos(5000);
     }
@@ -276,6 +278,7 @@ public class TrenPage extends BaseClass {
     }
 
     public String resultadoObtenidoTarjetaSinFondos() {
+        esperarXSegundos(15000);
         WebElement valor = driver.findElement(locatorErrorTarjetaSinFondos);
         String texto = valor.getText();
         return texto;

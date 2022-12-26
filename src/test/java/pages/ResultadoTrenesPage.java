@@ -37,16 +37,17 @@ public class ResultadoTrenesPage extends BaseClass {
 
 
     public String obtenerValorMasBarato() {
+        esperarXSegundos(10000);
         WebElement valorMasBarato = driver.findElement(locatorPrecioMasBarato);
         String valor = valorMasBarato.getText();
         return valor;
     }
 
     public String obtenerValorMasBaratoHead() {
-        esperarXSegundos(8000);
-        WebElement valorMasBaratoHead = driver.findElement(locatorPrecioMasBaratoHead);
-        String prueba = valorMasBaratoHead.getText();
-        return prueba;
+        esperarXSegundos(10000);
+        WebElement valorMasBarato = driver.findElement(locatorPrecioMasBarato);
+        String valor = valorMasBarato.getText();
+        return valor;
     }
 
     public void modificarParametros(String origen, String destino) {
@@ -82,7 +83,7 @@ public class ResultadoTrenesPage extends BaseClass {
     }
 
     public String obtenerPrecio2() {
-        esperarXSegundos(7000);
+        esperarXSegundos(10000);
         WebElement precioBusqueda2 = driver.findElement(locatorPrecioBusqueda2);
         String precioFinal = precioBusqueda2.getText();
         System.out.println(precioFinal);

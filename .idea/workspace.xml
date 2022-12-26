@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Merge Trenes">
+    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se añade Data.xlsx con los parametros para cada caso&#10;Se implementa estructura properties.properties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/ResultadoTrenesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ResultadoTrenesPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/VuelosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/VuelosPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaVuelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaVuelos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato">
+  <component name="RunManager" selected="TestNG.CasosDePruebaVuelos.CP006_BusquedaVueloHotel_Datos_Compra_Invalidos">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BC11" />
       <method v="2">
@@ -81,24 +80,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="BC11" />
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
-      <option name="METHOD_NAME" value="CP007_BusquedaTrenes_IdaVuelta" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePruebaVuelos.CP001_BusquedaVuelo_MismoOrigen_Y_Destino" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -148,8 +129,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaVuelos" />
-      <option name="METHOD_NAME" value="CP001_BusquedaVuelo_MismoOrigen_Y_Destino" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
+      <option name="METHOD_NAME" value="CP011_BusquedaTrenes_TarjetaVencida" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasosDePruebaTrenes.CP012_BusquedaTrenes_TarjetaSinFondos" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
+      <option name="METHOD_NAME" value="CP012_BusquedaTrenes_TarjetaSinFondos" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -177,10 +176,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato" />
-        <item itemvalue="TestNG.CasosDePruebaVuelos.CP001_BusquedaVuelo_MismoOrigen_Y_Destino" />
         <item itemvalue="TestNG.CasosDePruebaVuelos.CP006_BusquedaVueloHotel_Datos_Compra_Invalidos" />
-        <item itemvalue="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP012_BusquedaTrenes_TarjetaSinFondos" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP011_BusquedaTrenes_TarjetaVencida" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel" />
       </list>
     </recent_temporary>
@@ -271,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672031073527</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Se añade Data.xlsx con los parametros para cada caso&#10;Se implementa estructura properties.properties">
+      <created>1672043478361</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672043478361</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,6 +302,7 @@
     <MESSAGE value="Actualizado y finalizado caso 001" />
     <MESSAGE value="Actualizacion desarrollo CP10" />
     <MESSAGE value="Merge Trenes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge Trenes" />
+    <MESSAGE value="Se añade Data.xlsx con los parametros para cada caso&#10;Se implementa estructura properties.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se añade Data.xlsx con los parametros para cada caso&#10;Se implementa estructura properties.properties" />
   </component>
 </project>
