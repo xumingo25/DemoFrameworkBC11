@@ -59,6 +59,38 @@ public class VuelosPage extends BaseClass {
 
 
     //(Aca se termina las lineas de Nacho)
+    //Lineas para Jeni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Aca se acaban las lineas de Jeni
 
 
     public void SeleccionarVueloIda(){
@@ -134,4 +166,37 @@ public class VuelosPage extends BaseClass {
 
 
     //Aca se acaban las lineas de Nacho
+
+    //Lineas para Jeni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Aca se acaban las lineas de Jeni
 }
