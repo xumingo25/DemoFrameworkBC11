@@ -61,7 +61,7 @@ public class CasosDePruebaVuelos {
         homePage.irAVuelo_Hotel();
         vuelosPage.completarBusqueda("Madrid","Tokyo");
         vuelosPage.seleccionVueloPreseleccionado();
-        //Assert.assertEquals();
+        Assert.assertEquals("VUELO DE IDA",vuelosPage.obtenerViajePreseleccionado());
     }
 
     @Test
@@ -69,12 +69,25 @@ public class CasosDePruebaVuelos {
         homePage.aceptarCookies();
         homePage.irAVuelos();
         vuelosPage.completarBusqueda_DetallesHotel("Madrid","Tokyo");
-
+        homePage.handles();
+        vuelosPage.ResultadosBusquedaHotel();
+        homePage.handles();
+        vuelosPage.ResultadosHabitacion();
+        Assert.assertEquals("Iniciar sesión",vuelosPage.obtenerInicioSesion());
     }
 
     @Test
     public void CP005_BusquedaVuelo_Validar_Formulario_Reserva(){
         homePage.aceptarCookies();
+        homePage.irAVuelos();
+        vuelosPage.completarBusquedaFormReserva("Madrid","Tokyo");
+        homePage.handles();
+        vuelosPage.seleccionReservaVuelo();
+        vuelosPage.completarFormularioQuienReserva("Asdgasdg","Aasdfasdg","aasdfsfd@aereo.com","4565415616");
+        vuelosPage.completarFormularioQuienViaja_Huesped1("Asdfasdf","Aasdfasdg","17","1994");
+        vuelosPage.completarFormularioQuienViaja_Huesped2("Asdfasdg","Asdgasddg","24","1991");
+        vuelosPage.resultadoReservaVuelo();
+        Assert.assertEquals("Diseña tu viaje añadiendo los servicios que necesites",vuelosPage.obtenerDisenioDeViaje());
     }
 
     @Test
@@ -83,6 +96,8 @@ public class CasosDePruebaVuelos {
         homePage.irAVuelo_Hotel();
         vuelosPage.completarBusqueda("Madrid", "Tokyo");
         vuelosPage.seleccionAlojamiento_VueloHotel();
+        homePage.handles();
+        vuelosPage.seleccionHabitacion_VueloHotel();
         vuelosPage.completarFormularioQuienReserva("Asdgasdg","Aasdfasdg","aasdfsfd@aereo.com","4565415616");
         vuelosPage.completarFormularioQuienViaja_Huesped1("Asdfasdf","Aasdfasdg","17","1994");
         vuelosPage.completarFormularioQuienViaja_Huesped2("Asdfasdf","Aasdfasdg","23","1991");
@@ -90,6 +105,6 @@ public class CasosDePruebaVuelos {
         vuelosPage.completarSeguroYFormulario_ComoDeseaPagar("awetgasgawrg","4120 0316 8659 8659","06","29","642");
         vuelosPage.completarFormularioPagoParticular("Asdgfasg","SDAERGAEGHHG","Asdgasdfg","Asgasdg","asdga",
                 "asdgasdfg","Asdfgasdfgadf","aerwg@gasg.com","46416161");
-
+        Assert.assertEquals("Lo sentimos", vuelosPage.obtenerErrorCompra());
     }
 }
