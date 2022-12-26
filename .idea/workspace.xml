@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="34a37b47-89ed-4c1d-8230-18df7a8a273b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-=======
       <change beforePath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" afterDir="false" />
->>>>>>> 8e7306a6f81970d20a53bc822dd0dcb32c2d127a
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +57,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasoDePruebaVuelos.CP002_Ver_Precios_Ida_Y_Vuelta">
+  <component name="RunManager" selected="TestNG.CasoDePruebaVuelos.CP001_Ver_Precios_De_Vuelo_Solo_Ida">
     <configuration name="CPs" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BC11" />
       <extension name="coverage">
@@ -114,6 +111,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CasoDePruebaVuelos.CP001_Ver_Precios_De_Vuelo_Solo_Ida" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CasosDePrueba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaVuelos" />
+      <option name="METHOD_NAME" value="CP001_Ver_Precios_De_Vuelo_Solo_Ida" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CasoDePruebaVuelos.CP002_Ver_Precios_Ida_Y_Vuelta" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Proyectazo" />
       <extension name="coverage">
@@ -134,6 +149,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CasoDePruebaVuelos.CP001_Ver_Precios_De_Vuelo_Solo_Ida" />
         <item itemvalue="TestNG.CasoDePruebaVuelos.CP002_Ver_Precios_Ida_Y_Vuelta" />
         <item itemvalue="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco" />
         <item itemvalue="TestNG.CPs" />

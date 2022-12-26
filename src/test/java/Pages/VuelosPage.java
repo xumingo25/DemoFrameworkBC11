@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utils.BaseClass;
 
+
 public class VuelosPage extends BaseClass {
     public VuelosPage(WebDriver driver) {
         super(driver);
@@ -18,7 +19,8 @@ public class VuelosPage extends BaseClass {
 
     By locatorSeleccionarDiaVuelta= By.xpath(("//button[contains(text(),16)]"));
     By locatorSeleccionarViajero=By.xpath(("//span[contains(text(),'1 viajero')]"));
-    By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Turista')]"));
+    By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Cualquier clase')]"));
+
     By locatorSeleccionarBuscar=By.xpath(("//Button[contains(text(),'Buscar')]"));
 
     By locatorFiltrarBarato=By.xpath(("//div[contains(text(),'Más barato')]"));
@@ -56,15 +58,14 @@ public class VuelosPage extends BaseClass {
 
 
 
-
-
     //(Aca se termina las lineas de Nacho)
     //Lineas para Jeni
-
-
-
-
-
+    By locatorSeleccionarClaseOpcion=By.xpath(("//span[contains(text(),'Turista')]"));
+    By locatorSeleccionarOrigenOpcion=By.xpath(("//span[contains(text(),'Ciudad de México Todos los aeropuertos')]"));
+    public void SeleccionarClaseOpcion(){
+        click(esperarAElementoWeb(locatorSeleccionarClaseOpcion)); }
+    public void SeleccionarOrigenOpcion(){
+        click(esperarAElementoWeb(locatorSeleccionarOrigenOpcion));}
 
 
 
@@ -167,7 +168,6 @@ public class VuelosPage extends BaseClass {
     //Aca se acaban las lineas de Nacho
 
     //Lineas para Jeni
-
 
 
 
