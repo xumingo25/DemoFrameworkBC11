@@ -142,6 +142,9 @@ public class BaseClass {
         select = new Select(elemento);
         select.selectByVisibleText(texto);
     }
+
+
+
     public void cerrarBrowser(){
         this.driver.quit();
     }

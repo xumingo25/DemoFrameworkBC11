@@ -237,7 +237,7 @@ public class VuelosPage extends BaseClass {
         esperarXSegundos(1000);
     }
     public void seleccionAlojamiento_VueloHotel(){
-        esperarXSegundos(10000);
+        esperarXSegundos(15000);
         click(locatorSeleccionAlojamiento);
         esperarXSegundos(10000);
     }
