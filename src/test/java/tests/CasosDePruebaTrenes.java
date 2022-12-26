@@ -102,10 +102,10 @@ public class CasosDePruebaTrenes {
         trenPage.boletoSoloIda();
         trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
         trenPage.completarFormularioSoloIda();
-        trenPage.aumentarViajero();
+        //trenPage.aumentarViajero();
         trenPage.clickBuscar();
         trenPage.clickPrimerPasaje();
-        trenPage.formularioQuienReserva("Ariana","Niesi","ariananiesi@gmail.com",1157966485);
+        trenPage.formularioQuienReserva("Ariana","Niesi","ariananiesi@gmail.com","1157966485","13","1999");
         // completar formulario quién viaja
         // completar formulario cómo deseas pagar
 
