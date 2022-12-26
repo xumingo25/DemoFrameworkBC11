@@ -40,6 +40,7 @@ public class CasosDePruebaVuelos {
     @AfterMethod
     public void posTests(){
         homePage.cerrarBrowser();
+
     }
 
     @Test
