@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.VuelosPage;
+import utils.DataDriven;
 import utils.PropertiesDriven;
 
 import java.util.ArrayList;
@@ -43,71 +44,77 @@ public class CasosDePruebaVuelos {
 
     @Test
     public void CP001_BusquedaVuelo_MismoOrigen_Y_Destino(){
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP001"));
         homePage.aceptarCookies();
         homePage.irAVuelos();
-        vuelosPage.completarBusquedaFormReserva("Madrid","Madrid");
-        Assert.assertEquals("El destino coincide con el origen",vuelosPage.obtenerErrorMismoOrigenYDestino());
+        vuelosPage.completarBusquedaFormReserva(data.get(2), data.get(3));
+        Assert.assertEquals(data.get(9),vuelosPage.obtenerErrorMismoOrigenYDestino());
     }
 
     @Test
     public void CP002_BusquedaVuelo_Error_Campos_Origen_Destino(){
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP002"));
         homePage.aceptarCookies();
         homePage.irAVuelos();
-        vuelosPage.completarBusqueda_OrigenDestino_Incorrectos("asdasd", "asdasd");
-        String res = "La búsqueda no ha dado resultados";
-        Assert.assertEquals(vuelosPage.obtenerErrorOrigen(), res);
+        vuelosPage.completarBusqueda_OrigenDestino_Incorrectos(data.get(2), data.get(3));
+        String errorBusqueda = data.get(1);
+        Assert.assertEquals(vuelosPage.obtenerErrorOrigen(), errorBusqueda);
     }
 
     @Test
     public void CP003_BusquedaVueloHotel_Despliegue_Vuelo_Preseleccionado(){
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP003"));
         homePage.aceptarCookies();
         homePage.irAVuelo_Hotel();
-        vuelosPage.completarBusqueda("Madrid","Tokyo");
+        vuelosPage.completarBusqueda(data.get(2), data.get(3));
         vuelosPage.seleccionVueloPreseleccionado();
-        Assert.assertEquals("VUELO DE IDA",vuelosPage.obtenerViajePreseleccionado());
+        Assert.assertEquals(data.get(1),vuelosPage.obtenerViajePreseleccionado());
     }
 
     @Test
     public void CP004_BusquedaVueloHotel_Funcion_Detalles(){
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP004"));
         homePage.aceptarCookies();
         homePage.irAVuelos();
-        vuelosPage.completarBusqueda_DetallesHotel("Madrid","Tokyo");
+        vuelosPage.completarBusqueda_DetallesHotel(data.get(2),data.get(3));
         homePage.handles();
         vuelosPage.ResultadosBusquedaHotel();
         homePage.handles();
         vuelosPage.ResultadosHabitacion();
-        Assert.assertEquals("Iniciar sesión",vuelosPage.obtenerInicioSesion());
+        Assert.assertEquals(data.get(1),vuelosPage.obtenerInicioSesion());
     }
 
     @Test
     public void CP005_BusquedaVuelo_Validar_Formulario_Reserva(){
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP005"));
         homePage.aceptarCookies();
         homePage.irAVuelos();
-        vuelosPage.completarBusquedaFormReserva("Madrid","Tokyo");
+        vuelosPage.completarBusquedaFormReserva(data.get(2), data.get(3));
         homePage.handles();
         vuelosPage.seleccionReservaVuelo();
-        vuelosPage.completarFormularioQuienReserva("Asdgasdg","Aasdfasdg","aasdfsfd@aereo.com","4565415616");
-        vuelosPage.completarFormularioQuienViaja_Huesped1("Asdfasdf","Aasdfasdg","17","1994");
-        vuelosPage.completarFormularioQuienViaja_Huesped2("Asdfasdg","Asdgasddg","24","1991");
+        vuelosPage.completarFormularioQuienReserva(data.get(4), data.get(5), data.get(6), data.get(7));
+        vuelosPage.completarFormularioQuienViaja_Huesped1(data.get(8), data.get(9), data.get(10), data.get(11));
+        vuelosPage.completarFormularioQuienViaja_Huesped2(data.get(12), data.get(13), data.get(14), data.get(15));
         vuelosPage.resultadoReservaVuelo();
-        Assert.assertEquals("Diseña tu viaje añadiendo los servicios que necesites",vuelosPage.obtenerDisenioDeViaje());
+        Assert.assertEquals(data.get(1),vuelosPage.obtenerDisenioDeViaje());
     }
 
     @Test
     public void CP006_BusquedaVueloHotel_Datos_Compra_Invalidos() {
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP006"));
         homePage.aceptarCookies();
         homePage.irAVuelo_Hotel();
-        vuelosPage.completarBusqueda("Madrid", "Tokyo");
+        vuelosPage.completarBusqueda(data.get(2), data.get(3));
         vuelosPage.seleccionAlojamiento_VueloHotel();
         homePage.handles();
         vuelosPage.seleccionHabitacion_VueloHotel();
-        vuelosPage.completarFormularioQuienReserva("Asdgasdg","Aasdfasdg","aasdfsfd@aereo.com","4565415616");
-        vuelosPage.completarFormularioQuienViaja_Huesped1("Asdfasdf","Aasdfasdg","17","1994");
-        vuelosPage.completarFormularioQuienViaja_Huesped2("Asdfasdf","Aasdfasdg","23","1991");
-        vuelosPage.completarFormularioQuienViaja_Huesped3("Asdfasdf","Aasdfasdg","14","1990");
-        vuelosPage.completarSeguroYFormulario_ComoDeseaPagar("awetgasgawrg","4120 0316 8659 8659","06","29","642");
-        vuelosPage.completarFormularioPagoParticular("Asdgfasg","SDAERGAEGHHG","Asdgasdfg","Asgasdg","asdga",
-                "asdgasdfg","Asdfgasdfgadf","aerwg@gasg.com","46416161");
-        Assert.assertEquals("Lo sentimos", vuelosPage.obtenerErrorCompra());
+        vuelosPage.completarFormularioQuienReserva(data.get(4), data.get(5), data.get(6), data.get(7));
+        vuelosPage.completarFormularioQuienViaja_Huesped1(data.get(8), data.get(9), data.get(10), data.get(11));
+        vuelosPage.completarFormularioQuienViaja_Huesped2(data.get(12), data.get(13), data.get(14), data.get(15));
+        vuelosPage.completarFormularioQuienViaja_Huesped3(data.get(16), data.get(17), data.get(18), data.get(19));
+        vuelosPage.completarSeguroYFormulario_ComoDeseaPagar(data.get(20), data.get(21), data.get(22), data.get(23), data.get(24));
+        vuelosPage.completarFormularioPagoParticular(data.get(25), data.get(26), data.get(27), data.get(28), data.get(29),
+                data.get(30), data.get(31), data.get(32), data.get(33));
+        Assert.assertEquals(data.get(1), vuelosPage.obtenerErrorCompra());
     }
 }
