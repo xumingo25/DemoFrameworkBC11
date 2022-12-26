@@ -1,26 +1,28 @@
 package utils;
 
-//La clase base define las acciones de selenium (Wrapper)
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
+import java.util.List;
+
 public class BaseClass {
-    //Atributos
+
     protected WebDriver driver;
     protected JavascriptExecutor js;
 
     protected WebDriverWait wait;
 
     protected Select select;
+
+    //getter an seter
+
 
     public WebDriver getDriver() {
         return driver;
@@ -30,23 +32,24 @@ public class BaseClass {
         this.driver = driver;
     }
 
-    //Métodos
     public BaseClass(WebDriver driver) {
         this.driver = driver;
     }
 
-    //Enmascarar las acciones(Métodos) de selenium
-
     public WebElement buscarElementoWeb(By localizador){
         return this.driver.findElement(localizador);
+
     }
 
+    public List<WebElement> buscarElementosWeb(By localizador){
+        return this.driver.findElements(localizador);
+
+    }
     public void cargarPagina(String url){
         this.driver.get(url);
     }
 
-    //Conectar el driver al browser
-    public WebDriver conexionBrowser(String browser,String propertyDriver,String rutaDriver){
+    public WebDriver conexionBrowser(String browser, String propertyDriver, String rutaDriver){
         switch (browser){
             case "CHROME":
                 System.setProperty(propertyDriver,rutaDriver);
@@ -54,11 +57,11 @@ public class BaseClass {
                 return this.driver;
             case "EDGE":
                 System.setProperty(propertyDriver,rutaDriver);
-                this.driver =  new EdgeDriver();
+                this.driver = new EdgeDriver();
                 return this.driver;
             case "FIREFOX":
                 System.setProperty(propertyDriver,rutaDriver);
-                this.driver =  new FirefoxDriver();
+                this.driver = new FirefoxDriver();
                 return this.driver;
             default:
                 this.driver = null;
@@ -66,39 +69,36 @@ public class BaseClass {
         }
     }
 
-    //Scroll
-    public void ScrollElementoWeb(By localizador){
+    public void scrollElementoWeb(By localizador){
         js = (JavascriptExecutor) this.driver;
-
-        js.executeScript("arguments[0].scrollIntoView();", this.driver.findElement(localizador));
+        js.executeScript("arguments[0].scrollIntoView();",this.driver.findElement(localizador));
     }
 
-    public void ScrollElementoWeb(WebElement elemento){
+    public void scrollElementoWeb(WebElement elemento){
         js = (JavascriptExecutor) this.driver;
-
-        js.executeScript("arguments[0].scrollIntoView();", elemento);
+        js.executeScript("arguments[0].scrollIntoView();",elemento);
     }
 
-
-    //Tiempos de espera
-
-    //Espera por X segundos
-    public void esperarXSegundos(int milisegundos){
-        try{
+    public void esperaXSegundos(int milisegundos){
+        try {
             Thread.sleep(milisegundos);
         }catch (Exception ex){
-            System.out.println("Fallo la espera en milisegundos definida.");
+            System.out.println("Fallo la espera en milisegundos");
         }
     }
 
-    //Espera en base a evento
     public WebElement esperarAElementoWeb(By localizador){
         wait = new WebDriverWait(this.driver,20);
 
         return wait.until(ExpectedConditions.presenceOfElementLocated(localizador));
     }
 
-    //click
+    public WebElement esperarAElementoWeb(WebElement element){
+        wait = new WebDriverWait(this.driver,20);
+
+        return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public void click(WebElement elemento){
         elemento.click();
     }
@@ -107,7 +107,6 @@ public class BaseClass {
         this.driver.findElement(localizador).click();
     }
 
-    //obtenerTexto
     public String obtenerTexto(WebElement elemento){
         return elemento.getText();
     }
@@ -116,36 +115,69 @@ public class BaseClass {
         return this.driver.findElement(localizador).getText();
     }
 
-    //Submit
     public void submitFormulario(By localizador){
         this.driver.findElement(localizador).submit();
     }
 
-    //agregarTexto
     public void agregarTexto(WebElement elemento, String texto){
         elemento.sendKeys(texto);
     }
 
-    public void agregarTexto(By localizador,String texto){
+    public void agregarTexto(By localizador, String texto){
         this.driver.findElement(localizador).sendKeys(texto);
     }
 
-    //Maximizar la pagina
-    public void maximizarBrowser(){
+    public void maximizarPagina(){
         driver.manage().window().maximize();
     }
 
-    public void seleccionarDDlPorTexto(WebElement elemento,String texto){ //Febrero
+    //metod lista encontar
+    public void selecionMesNacimiento(WebElement elemento, String texto){
         select = new Select(elemento);
         select.selectByVisibleText(texto);
     }
-
-
 
     public void cerrarBrowser(){
         this.driver.quit();
     }
 
+    public WebElement obtenerElementoHijo(WebElement elementoPadre, By localizadorElementoHijo){
+        esperaXSegundos(2000);
+        return elementoPadre.findElement(localizadorElementoHijo);
+    }
+
+    public void manejoAlerta () {
+        driver.switchTo().alert().accept();
+    }
+
+    public void selecionFechaIda(WebElement elemento, String texto){
+        select = new Select(elemento);
+        select.selectByVisibleText(texto);
+    }
+
+    public void selecionFechaVuelta(WebElement elemento, String texto){
+        select = new Select(elemento);
+        select.selectByVisibleText(texto);
+    }
+
+    public void selecionOrigen(WebElement elemento, String texto){
+        select = new Select(elemento);
+        select.selectByVisibleText(texto);
+    }
+
+    public void selecionDestino(WebElement elemento, String texto){
+        select = new Select(elemento);
+        select.selectByVisibleText(texto);
+    }
+
+    public void realizarAccion(Keys keys){
+        Actions actions = new Actions(this.driver);
+
+        actions.sendKeys(keys).build().perform();
+    }
+
+    public void bajarScrollMouse(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,500)");
+    }
 }
-
-
