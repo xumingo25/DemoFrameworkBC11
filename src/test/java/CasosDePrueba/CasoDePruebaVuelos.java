@@ -31,7 +31,7 @@ public class CasoDePruebaVuelos {
     }
 
     //lineas NAcho
-   /* @Test
+    @Test
     public void CP002_Ver_Precios_Ida_Y_Vuelta(){
         HomePage.irAVuelos();
         VuelosPage.SeleccionarIdaYVuelta();
@@ -46,7 +46,7 @@ public class CasoDePruebaVuelos {
         VuelosPage.SeleccionarViajero();
         VuelosPage.SeleccionarClase();
         VuelosPage.SeleccionarBuscar();
-    }*/
+    }
 
 
 

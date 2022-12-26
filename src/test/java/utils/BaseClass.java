@@ -2,10 +2,7 @@ package utils;
 
 //La clase base define las acciones de selenium (Wrapper)
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -139,7 +136,6 @@ public class BaseClass {
         select = new Select(elemento);
         select.selectByVisibleText(texto);
     }
-
 
 
     public void cerrarBrowser(){
