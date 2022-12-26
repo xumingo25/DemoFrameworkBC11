@@ -27,7 +27,7 @@ public class DataDriven {
 
         //Se intenta instanciar el objeto de tipo file
         try {
-            file = new FileInputStream(PropertiesDriven.getProperty("rutaExcel"));
+            file = new FileInputStream("C:\\Users\\Franco\\IdeaProjects\\DemoFrameworkBC11\\src\\test\\resources\\data\\DataPruebas.xlsx");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

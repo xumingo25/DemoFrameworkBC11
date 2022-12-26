@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34a37b47-89ed-4c1d-8230-18df7a8a273b" name="Changes" comment="">
-
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Testeando el push" />
-
-
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se crea V1 de clase Base.">
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Testeando el push">
+    <list default="true" id="14b3109a-81bd-4041-8042-dc499ac3a63c" name="Changes" comment="Testeando el push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/VuelosPage.java" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/BaseClass.java" afterDir="false" />
-=======
-
->>>>>>> af3fa90e2a16ef9bcabb6f2676639da473f47556
     </list>
-
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +17,13 @@
       <list>
         <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_FF" />
+      </set>
     </option>
   </component>
   <component name="Git.Rebase.Settings">
@@ -61,7 +52,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jenifer.espeche/Desktop/DemoFrameworkBC11&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/Tsoft&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -71,7 +62,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco">
+  <component name="RunManager" selected="TestNG.CasoDePruebaHoteles.CP006_Busqueda_Hoteles_Obtener_Reserva">
     <configuration name="CPs" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="BC11" />
       <extension name="coverage">
@@ -107,17 +98,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CPs.CP002_Registro_Fallido_Password_Corta" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="BC11" />
+    <configuration name="CasoDePruebaHoteles.CP002_Busqueda_De_Paquetes_Disponibles" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="CasosDePrueba.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CPs" />
-      <option name="METHOD_NAME" value="CP002_Registro_Fallido_Password_Corta" />
+      <option name="PACKAGE_NAME" value="CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaHoteles" />
+      <option name="METHOD_NAME" value="CP002_Busqueda_De_Paquetes_Disponibles" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasoDePruebaHoteles.CP004_Busqueda_Hoteles_Cambio_Lugar" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CasosDePrueba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaHoteles" />
+      <option name="METHOD_NAME" value="CP004_Busqueda_Hoteles_Cambio_Lugar" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasoDePruebaHoteles.CP006_Busqueda_Hoteles_Obtener_Reserva" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CasosDePrueba.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CasosDePrueba" />
+      <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaHoteles" />
+      <option name="METHOD_NAME" value="CP006_Busqueda_Hoteles_Obtener_Reserva" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -127,9 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CasoDePruebaHoteles.CP006_Busqueda_Hoteles_Obtener_Reserva" />
+        <item itemvalue="TestNG.CasoDePruebaHoteles.CP004_Busqueda_Hoteles_Cambio_Lugar" />
+        <item itemvalue="TestNG.CasoDePruebaHoteles.CP002_Busqueda_De_Paquetes_Disponibles" />
         <item itemvalue="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco" />
         <item itemvalue="TestNG.CPs" />
-        <item itemvalue="TestNG.CPs.CP002_Registro_Fallido_Password_Corta" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +226,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/utils/BaseClass.java</url>
           <line>101</line>
-          <properties class="utils.BaseClass" method="click">
+          <properties class="utils.BaseClass">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
