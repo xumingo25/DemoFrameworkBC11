@@ -33,11 +33,34 @@ public class CasoDePruebaHoteles {
 
     //HOTELES TESTS
     @Test
-    public void CP001_Busqueda_Hoteles_Semana_Cualquier_Fecha(){
+    public void CP001_Busqueda_Hoteles_Semana_Cualquier_Fecha() {
         HomePage.BtnRechazar();
         HomePage.BtnHoteles();
         HotelPage.Completar("barcelona");
-        Assert.assertEquals(HotelPage.obtenerResultados(),"300+ resultados encontrados para Fin de semana cualquier fecha");
+        Assert.assertEquals(HotelPage.obtenerResultados(), "300+ resultados encontrados para Fin de semana cualquier fecha");
     }
 
+    @Test
+    public void CP003_Elegir_Alojamiento() throws InterruptedException {
+        HomePage.BtnRechazar();
+        HomePage.irALogin();
+        Thread.sleep(2000);
+        HomePage.CompletarLogin("lautaro.coria@tsoftglobal.com", "123456");
+        HomePage.BtnHoteles();
+        HotelPage.Completar("Barcelona");
+        HotelPage.BtnSeleccionAloj();
+    }
+
+    @Test
+    public void CP005_Buscar_Opciones_Disponibles_Tren_Mas_Hotel(){
+        HomePage.BtnRechazar();
+        HomePage.BtnHoteles();
+        HotelPage.BtnVueloHotel();
+        HotelPage.CompletarFormVueloHotel();
+
+        /*HotelPage.Selhotel();
+        HotelPage.ElegirHab();
+        HotelPage.SoloAloj();*/
+
+    }
 }
