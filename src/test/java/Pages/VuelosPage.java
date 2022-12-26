@@ -2,6 +2,7 @@ package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import utils.BaseClass;
 
 public class VuelosPage extends BaseClass {
@@ -14,6 +15,8 @@ public class VuelosPage extends BaseClass {
     By locatorSeleccionarFechaDeIda= By.xpath(("//label[contains(text(),'Fecha de ida')]"));
     By locatorCambiarAlMesSiguiente= By.xpath(("//button[@aria-label='Next month']"));
     By locatorSeleccionarDia= By.xpath(("//button[contains(text(),6)]"));
+
+    By locatorSeleccionarDiaVuelta= By.xpath(("//button[contains(text(),16)]"));
     By locatorSeleccionarViajero=By.xpath(("//span[contains(text(),'1 viajero')]"));
     By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Turista')]"));
     By locatorSeleccionarBuscar=By.xpath(("//Button[contains(text(),'Buscar')]"));
@@ -26,12 +29,11 @@ public class VuelosPage extends BaseClass {
 
     By locatorVerDetalle=By.xpath(("//button[contains(text(),'ver detalles')]"));
     //Lineas para Nacho (Desde 28 hasta 58)
+    By locatorBtnVueloIdaYVuelta = By.xpath(("//div[contains(text(),'Ida y vuelta')]"));
 
+    By locatorClearButton = By.xpath(("//div[@role='button']"));
 
-
-
-
-
+    By locatorSeleccionarFechaDeVuelta= By.xpath(("//label[contains(text(),'Fecha de vuelta')]"));
 
 
 
@@ -57,6 +59,37 @@ public class VuelosPage extends BaseClass {
 
 
     //(Aca se termina las lineas de Nacho)
+    //Lineas para Jeni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Aca se acaban las lineas de Jeni
 
 
     public void SeleccionarVueloIda(){
@@ -64,6 +97,7 @@ public class VuelosPage extends BaseClass {
     }
     public void SeleccionarOrigen(String ciudadOrigen){
         click(esperarAElementoWeb(locatorSeleccionarOrigen));
+        click(esperarAElementoWeb(locatorClearButton));
         agregarTexto(esperarAElementoWeb(locatorSeleccionarOrigen),ciudadOrigen);
     }
     public void SeleccionarDestino(String ciudadDestino){
@@ -98,14 +132,16 @@ public class VuelosPage extends BaseClass {
     public void VerDetalle(){click(esperarAElementoWeb(locatorVerDetalle));
     }
     //Lineas para nacho (desde 100 hasta 130)
+    public void SeleccionarIdaYVuelta(){
+        click(esperarAElementoWeb(locatorBtnVueloIdaYVuelta));
+    }
+    public void SeleccionarFechaVuelta(){
+        click(esperarAElementoWeb(locatorSeleccionarFechaDeVuelta));
+    }
 
-
-
-
-
-
-
-
+    public void SeleccionarDiaVuelta(){
+        click(esperarAElementoWeb(locatorSeleccionarDiaVuelta));
+    }
 
 
 
@@ -129,4 +165,37 @@ public class VuelosPage extends BaseClass {
 
 
     //Aca se acaban las lineas de Nacho
+
+    //Lineas para Jeni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Aca se acaban las lineas de Jeni
 }

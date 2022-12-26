@@ -29,9 +29,106 @@ public class CasoDePruebaVuelos {
         VuelosPage = new VuelosPage(HomePage.getDriver());
         HomePage.BtnRechazar();
     }
+
+    //lineas NAcho
     @Test
     public void CP002_Ver_Precios_Ida_Y_Vuelta(){
         HomePage.irAVuelos();
-
+        VuelosPage.SeleccionarIdaYVuelta();
+        VuelosPage.SeleccionarOrigen("Buenos Aires Todos los aeropuertos, Argentina");
+        VuelosPage.SeleccionarDestino("Medellín Todos los aeropuertos, Colombia");
+        VuelosPage.SeleccionarFechaDeIda();
+        VuelosPage.CambiarAlMesSiguiente();
+        VuelosPage.SeleccionarDia();
+        VuelosPage.SeleccionarFechaVuelta();
+        VuelosPage.CambiarAlMesSiguiente();
+        VuelosPage.SeleccionarDiaVuelta();
+        VuelosPage.SeleccionarViajero();
+        VuelosPage.SeleccionarClase();
+        VuelosPage.SeleccionarBuscar();
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//TerminaNacho
+//LineasJeni
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//terminalineasjeni

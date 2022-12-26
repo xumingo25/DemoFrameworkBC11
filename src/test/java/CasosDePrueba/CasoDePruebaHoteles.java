@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import Pages.HomePage;
 import Pages.HotelPage;
-import Pages.TrenesPage;
 import Pages.VuelosPage;
 
 public class CasoDePruebaHoteles {
