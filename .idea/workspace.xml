@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Se añade CPsHoteles y HotelesPages">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="44fb0f3d-cada-4233-9aae-b3fa543202e2" name="Changes" comment="Merge Trenes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TrenPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ResultadoTrenesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ResultadoTrenesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CPsHoteles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaTrenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaVuelos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/CasosDePruebaVuelos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/Data.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/properties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/properties.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +71,7 @@
       <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CPprueba">
+  <component name="RunManager" selected="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="BC11" />
       <method v="2">
@@ -79,24 +81,6 @@
     <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="BC11" />
       <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CPsHoteles.CP0001_Registro_Fallido_Email_Invalido" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CPsHoteles" />
-      <option name="METHOD_NAME" value="CP0001_Registro_Fallido_Email_Invalido" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,7 +139,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasosDePruebaTrenes.CPprueba" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CasosDePruebaVuelos.CP001_BusquedaVuelo_MismoOrigen_Y_Destino" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoFrameworkBC11" />
       <extension name="coverage">
         <pattern>
@@ -164,8 +148,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaTrenes" />
-      <option name="METHOD_NAME" value="CPprueba" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaVuelos" />
+      <option name="METHOD_NAME" value="CP001_BusquedaVuelo_MismoOrigen_Y_Destino" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CasosDePruebaVuelos.CP006_BusquedaVueloHotel_Datos_Compra_Invalidos" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoFrameworkBC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CasosDePruebaVuelos" />
+      <option name="METHOD_NAME" value="CP006_BusquedaVueloHotel_Datos_Compra_Invalidos" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -175,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CasosDePruebaTrenes.CPprueba" />
-        <item itemvalue="TestNG.CasosDePruebaTrenes.CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel" />
-        <item itemvalue="TestNG.CPsHoteles.CP0001_Registro_Fallido_Email_Invalido" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP009_BusquedaTrenes_SeleccionarTicketMasBarato" />
+        <item itemvalue="TestNG.CasosDePruebaVuelos.CP001_BusquedaVuelo_MismoOrigen_Y_Destino" />
+        <item itemvalue="TestNG.CasosDePruebaVuelos.CP006_BusquedaVueloHotel_Datos_Compra_Invalidos" />
         <item itemvalue="TestNG.CasosDePruebaTrenes.CP007_BusquedaTrenes_IdaVuelta" />
+        <item itemvalue="TestNG.CasosDePruebaTrenes.CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672001102234</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge Trenes">
+      <created>1672031073527</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1672031073527</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +295,7 @@
     <MESSAGE value="Se Actualiza caso 8 y 9&#10;Se crea clase ResultadoTrenesPages&#10;Se crean nuevos metodos en la clase BaseClass, TrenPage.&#10;Se incorpora metodo &quot;cambiar pestaña&quot;, disponible en la clase BaseClass.&#10;Fix errores causados por cambios en la pagina web." />
     <MESSAGE value="Actualizado y finalizado caso 001" />
     <MESSAGE value="Actualizacion desarrollo CP10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion desarrollo CP10" />
+    <MESSAGE value="Merge Trenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge Trenes" />
   </component>
 </project>

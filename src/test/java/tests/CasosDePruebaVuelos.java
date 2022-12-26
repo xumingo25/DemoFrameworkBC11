@@ -48,7 +48,7 @@ public class CasosDePruebaVuelos {
         homePage.aceptarCookies();
         homePage.irAVuelos();
         vuelosPage.completarBusquedaFormReserva(data.get(2), data.get(3));
-        Assert.assertEquals(data.get(9),vuelosPage.obtenerErrorMismoOrigenYDestino());
+        Assert.assertEquals(data.get(1),vuelosPage.obtenerErrorMismoOrigenYDestino());
     }
 
     @Test

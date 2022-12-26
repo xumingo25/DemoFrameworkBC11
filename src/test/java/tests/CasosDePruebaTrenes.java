@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.ResultadoTrenesPage;
 import pages.TrenPage;
+import utils.DataDriven;
 import utils.PropertiesDriven;
 
 import java.util.ArrayList;
@@ -45,35 +46,37 @@ public class CasosDePruebaTrenes {
 
     @Test
     public void CP007_BusquedaTrenes_IdaVuelta() {
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP007"));
         homePage.aceptarCookies();
         homePage.irATrenes();
-        trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
+        trenPage.completarBusquedaOrigenDestino(data.get(2),data.get(3));
         trenPage.completarBusquedaMes();
         trenPage.aumentarViajero();
         trenPage.clickBuscar();
         trenPage.getUrl2();
         String resultadoObtenido= trenPage.getUrl2();
 
-        Assert.assertTrue(resultadoObtenido.startsWith("https://trenes.rumbo.es"));
+        Assert.assertTrue(resultadoObtenido.startsWith(data.get(1)));
 
 
     }
     @Test
     public void CP008_BusquedaTrenes_ViajeAdultoNihno() {
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP008"));
         homePage.aceptarCookies();
         homePage.irATrenes();
-        trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
+        trenPage.completarBusquedaOrigenDestino(data.get(2), data.get(3));
         trenPage.completarBusquedaMes();
         trenPage.agregarNihno();
         trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
 
-        Assert.assertEquals(2, trenPage.obtenerTotalPasajerosResultadoBusqueda());
+        Assert.assertEquals(data.get(1), trenPage.obtenerTotalPasajerosResultadoBusqueda());
         //Falta parametrizar el valor actual de pasajeros.
     }
-
     @Test
     public void CP009_BusquedaTrenes_SeleccionarTicketMasBarato() {
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP009"));
         homePage.aceptarCookies();
         homePage.irATrenes();
         trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
@@ -81,61 +84,55 @@ public class CasosDePruebaTrenes {
         trenPage.agregarNihno();
         trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
-        //homePage.handleTabs();
-        resultadoTrenesPage.obtenerValorMasBaratoHead();
         resultadoTrenesPage.seleccionarBotonMasBarato();
         resultadoTrenesPage.obtenerValorMasBarato();
-        resultadoTrenesPage.obtenerValorMasBaratoHead();
-        Assert.assertEquals(resultadoTrenesPage.obtenerValorMasBarato(),"21,00 €");
-        //actualizar el valor del Assert valor esperado. Falta llamar valor desde la pagina de resultado busqueda
-
-
+        Assert.assertEquals(resultadoTrenesPage.obtenerValorMasBarato(),data.get(1));
     }
     @Test
     public void CP010_BusquedaTrenes_ModificarParametrosOfertasTrenHotel() {
-
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP010"));
         homePage.aceptarCookies();
         homePage.irATrenes();
-        trenPage.completarBusquedaOrigenDestino("Madrid", "Barcelona");
+        trenPage.completarBusquedaOrigenDestino(data.get(2), data.get(3));
         trenPage.completarBusquedaMes();
         trenPage.contadorPasajerosAdultos();
         trenPage.clickBuscar();
         String resultado1=resultadoTrenesPage.obtenerPrecio1();
-        resultadoTrenesPage.modificarParametros("Albacete","Alicante");
+        resultadoTrenesPage.modificarParametros(data.get(4),data.get(5));
         String resultado2= resultadoTrenesPage.obtenerPrecio2();
         Assert.assertNotEquals(resultado1,resultado2);
 
     }
     @Test
     public void CP011_BusquedaTrenes_TarjetaVencida() {
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP011"));
         homePage.aceptarCookies();
         homePage.irATrenes();
         trenPage.boletoSoloIda();
-        trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
+        trenPage.completarBusquedaOrigenDestino(data.get(2),data.get(3));
         trenPage.completarFormularioSoloIda();
         trenPage.clickBuscar();
         trenPage.clickPrimerPasaje();
-        trenPage.formularioQuienReserva("Ariana","Niesi","ariananiesi@gmail.com","1157966485","13","1999");
-        trenPage.formularioMetodoDePago("Ariana Micol Niesi","4051885600446623","11","22","123");
-        Assert.assertEquals(trenPage.resultadoObtenidoTarjetaVencida(),"Tu tarjeta ha caducado");
-        }
-
-        @Test
-        public void CP012_BusquedaTrenes_TarjetaSinFondos() {
-            homePage.aceptarCookies();
-            homePage.irATrenes();
-            trenPage.boletoSoloIda();
-            trenPage.completarBusquedaOrigenDestino("Madrid","Barcelona");
-            trenPage.completarFormularioSoloIda();
-            trenPage.clickBuscar();
-            trenPage.clickPrimerPasaje();
-            trenPage.formularioQuienReserva("Ariana","Niesi","ariananiesi@gmail.com","1157966485","13","1999");
-            trenPage.formularioMetodoDePago("Ariana Micol Niesi","4051885600446623","11","23","123");
-            trenPage.clickReservar();
-            trenPage.continuarSinFlex();
-            Assert.assertEquals(trenPage.resultadoObtenidoTarjetaSinFondos(),"Lo sentimos");
-
-        }
+        trenPage.formularioQuienReserva(data.get(4),data.get(5),data.get(6),data.get(7),data.get(8),data.get(9));
+        trenPage.formularioMetodoDePago(data.get(10),data.get(11),data.get(12), data.get(13), data.get(14));
+        Assert.assertEquals(trenPage.resultadoObtenidoTarjetaVencida(),data.get(1));
+    }
+    @Test
+    public void CP012_BusquedaTrenes_TarjetaSinFondos() {
+        data = DataDriven.getData(PropertiesDriven.getProperty("CP012"));
+        homePage.aceptarCookies();
+        homePage.irATrenes();
+        trenPage.boletoSoloIda();
+        trenPage.completarBusquedaOrigenDestino(data.get(2),data.get(3));
+        trenPage.completarFormularioSoloIda();
+        trenPage.clickBuscar();
+        trenPage.clickPrimerPasaje();
+        trenPage.formularioQuienReserva(data.get(4),data.get(5),data.get(6),data.get(7),data.get(8),data.get(9));
+        trenPage.formularioMetodoDePago(data.get(10),data.get(11),data.get(12), data.get(13), data.get(14));
+        trenPage.clickReservar();
+        trenPage.continuarSinFlex();
+        Assert.assertEquals(trenPage.resultadoObtenidoTarjetaSinFondos(),data.get(1));
+    }
 
 
 

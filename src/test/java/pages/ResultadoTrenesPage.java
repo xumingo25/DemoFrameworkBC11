@@ -14,7 +14,7 @@ public class ResultadoTrenesPage extends BaseClass {
 
     By locatorBtnMasBarato = By.xpath("//ul[@role='tablist']/li[2]");
     By locatorPrecioMasBarato = By.xpath("//section[@data-role='results']//following::span[1][@size=24]");
-    By locatorPrecioMasBaratoHead = By.xpath("//ul[@role='tablist']/li[2]/div[@class='sorting-tabs-view__amount']");
+    By locatorPrecioMasBaratoHead = By.xpath("//ul/li[2]/div[@class=sorting-tabs-view__amount]");
     By locatorBtnModificar = By.xpath("//span[contains(text(),'Modificar')]");
     By locatorSeleccionarNuevoOrigen = By.xpath("//input[@id='fromPlace']");
     By locatorIngresarNuevoDestino = By.xpath("//input[@id=\"toPlace\"]");
@@ -43,12 +43,10 @@ public class ResultadoTrenesPage extends BaseClass {
     }
 
     public String obtenerValorMasBaratoHead() {
-        //    JavascriptExecutor executor = (JavascriptExecutor)driver;
-        esperarXSegundos(4000);
+        esperarXSegundos(8000);
         WebElement valorMasBaratoHead = driver.findElement(locatorPrecioMasBaratoHead);
         String prueba = valorMasBaratoHead.getText();
         return prueba;
-        //     return (String) executor.executeScript("arguments[0].textContent()",valorMasBaratoHead);
     }
 
     public void modificarParametros(String origen, String destino) {

@@ -34,25 +34,6 @@ public class CPsHoteles {
         hotelesPage = new HotelesPage(homepage.getDriver());
     }
 
-    public void handleTabs() throws InterruptedException{
-        String mainTab = driver.getWindowHandle();
-        String newTab = "";
-
-        System.out.println("Main Tab: "+ mainTab);
-
-        Set<String> handles= driver.getWindowHandles();
-
-        for (String actual : handles){
-            System.out.println("-- Handled ID: +" + actual);
-
-            if(!actual.equalsIgnoreCase(mainTab)){
-                System.out.println("--Changing Tab--");
-                driver.switchTo().window(actual);
-
-                newTab = actual;
-            }
-        }
-    }
 
 
     @Test
