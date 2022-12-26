@@ -15,9 +15,9 @@ public class VuelosPage extends BaseClass {
     By locatorSeleccionarDestino= By.id("mui-2");
     By locatorSeleccionarFechaDeIda= By.xpath(("//label[contains(text(),'Fecha de ida')]"));
     By locatorCambiarAlMesSiguiente= By.xpath(("//button[@aria-label='Next month']"));
-    By locatorSeleccionarDia= By.xpath(("//button[contains(text(),6)]"));
+    By locatorSeleccionarDia= By.xpath(("//button[contains(text(),15)]"));
 
-    By locatorSeleccionarDiaVuelta= By.xpath(("//button[contains(text(),16)]"));
+    By locatorSeleccionarDiaVuelta= By.xpath(("//button[contains(text(),25)]"));
     By locatorSeleccionarViajero=By.xpath(("//span[contains(text(),'1 viajero')]"));
     By locatorSeleccionarClase=By.xpath(("//span[contains(text(),'Cualquier clase')]"));
 
@@ -61,19 +61,17 @@ public class VuelosPage extends BaseClass {
     //(Aca se termina las lineas de Nacho)
     //Lineas para Jeni
     By locatorSeleccionarClaseOpcion=By.xpath(("//span[contains(text(),'Turista')]"));
-    By locatorSeleccionarOrigenOpcion=By.xpath(("//span[contains(text(),'Ciudad de México Todos los aeropuertos')]"));
+    By locatorSeleccionarOrigenOpcion=By.xpath(("//span[contains(text(),'CUN')]"));
+    By locatorSeleccionarDestinoOpcion=By.xpath(("//span[contains(text(),'España')]"));
     public void SeleccionarClaseOpcion(){
         click(esperarAElementoWeb(locatorSeleccionarClaseOpcion)); }
     public void SeleccionarOrigenOpcion(){
+        BaseClass.esperarXSegundos(2000);
         click(esperarAElementoWeb(locatorSeleccionarOrigenOpcion));}
 
-
-
-
-
-
-
-
+    public void SeleccionarDestinoOpcion(){
+        BaseClass.esperarXSegundos(2000);
+        click(esperarAElementoWeb(locatorSeleccionarDestinoOpcion));}
 
 
 
