@@ -31,19 +31,6 @@ public class HomePage extends BaseClass {
         click(esperarAElementoWeb(clickOutletVuelos));
     }
 
-
-
-    //Fin Localizadores Rodolfo
-    //Localizadores (By) Juan Ignacio Ferreira
-
-
-
-
-
-
-    //Fin Localizadores Juan Ignacio Ferreira
-    //Localizadores (By) Joaquin Mercado
-
     By locatorbtnEscapadas = By.xpath("//a[@title=\"Escapadas\"]");
 
     //test 2
@@ -77,29 +64,27 @@ public class HomePage extends BaseClass {
         click(esperarAElementoWeb(locatorBtnFlsahSales));
     }
 
+    By locatorBtnHotel = By.xpath("(//a[@title='Hoteles'])[1]");
+
+
+    public void  irBotonHotel(){click(esperarAElementoWeb(locatorBtnHotel));}
+
+    private By locatorBtnCookies= By.xpath("//button[contains(text(),'Rechazar todo')]");
+    private By locatorBtnVuelos= By.xpath("//a[@title='Vuelos']");
 
 
 
 
+    //----------------------METODOS-------------------------------------
 
 
-    //Fin Localizadores Joaquin Mercado
-    //Localizadores (By) Jesica Noemi Rodriguez
+    public void rechazarCookies(){
+        click(esperarAElementoWeb(locatorBtnCookies));
+    }
 
-
-
-
-
-
-    //Fin Localizadores Jesica Noemi Rodriguez
-    //Localizadores (By) Juan Carlos Mercado
-
-
-
-
-
-
-    //Fin Localizadores Juan Carlos Mercado
+    public void irAVuelos(){
+        click(esperarAElementoWeb(locatorBtnVuelos));
+    }
 
 
 }

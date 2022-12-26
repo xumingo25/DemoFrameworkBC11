@@ -56,7 +56,7 @@ public class CPsRodolfo {
         homePage.irATrenes();
         trenesPage.completarDatosViajeEnTren("Madrid","Barcelona");
 
-        Assert.assertEquals(especifiTrenesPage.respuestaDeBusqueda(),"36 de 36 resultados");
+        Assert.assertEquals(especifiTrenesPage.respuestaDeBusqueda(),"30 de 30 resultados");
 
 
     }

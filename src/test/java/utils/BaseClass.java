@@ -180,4 +180,10 @@ public class BaseClass {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)");
     }
+
+    public void seleccionarDDlPorTexto(WebElement elemento,String texto){ //Febrero
+        select = new Select(elemento);
+        select.selectByVisibleText(texto);
+
+    }
 }
