@@ -43,7 +43,6 @@ public class CPsHoteles {
         hotelesPage.completarBusqueda("santiago de chile");
         homepage.handleTabs();
         String resultadoObtenido = hotelesPage.getUrl3();
-
         Assert.assertTrue(resultadoObtenido.contains("https://inspirame.rumbo.es"));
 
     }
@@ -56,7 +55,52 @@ public class CPsHoteles {
 
     }
 
+    @Test
+    public void CP013_Reserva_de_hotel_Con_Tarjeta_Num_Invalido(){
+        homepage.aceptarCookies();
+        homepage.irAHoteles();
+        hotelesPage.completarBusqueda("Cancun");
+        homepage.handleTabs();
+        hotelesPage.eleccionHotel();
+        homepage.handleTabs();
+        hotelesPage.eleccionHabitacion();
+        hotelesPage.completarFormularioReserva("David","Barcia","david.barcia@hotmail.com","23495123","David Barcia","485829","12","30");
+        Assert.assertEquals("Introduce un número válido",hotelesPage.obtenerErrorTarjeta());
+    }
 
+    @Test
+    public void CP014_Buscar_2_Habitacion_Con_Desayuno(){
+        homepage.aceptarCookies();
+        homepage.irAHoteles();
+        hotelesPage.completarBusqueda2Habitaciones("santiago de chile");
+        homepage.handleTabs();
+        hotelesPage.eleccionHotelConDesayuno();
+        homepage.handleTabs();
+        hotelesPage.eleccionHabitacionConDesayuno();
+        Assert.assertEquals("Añadir huéspedes y forma de pago",hotelesPage.obtenerExitoHDesayuno());
+    }
+
+    @Test
+    public void CP015_Buscar_Reserva_de_3_Habitaciones(){
+        homepage.aceptarCookies();
+        homepage.irAHoteles();
+        hotelesPage.completarBusqueda3Habitaciones("Toronto");
+        homepage.handleTabs();
+        Assert.assertEquals("Alojamientos en Toronto",hotelesPage.obtenerResultado3Hab());
+    }
+
+    @Test
+    public void CP017_Validar_Datos_Data_Erronea(){
+        homepage.aceptarCookies();
+        homepage.irAHoteles();
+        hotelesPage.completarBusqueda("Cancun");
+        homepage.handleTabs();
+        hotelesPage.eleccionHotel();
+        homepage.handleTabs();
+        hotelesPage.eleccionHabitacion();
+        hotelesPage.completarFormularioReserva("David","Barcia","davidhotmail.com","23495123","","","","");
+        Assert.assertEquals("Introduce un email válido",hotelesPage.obtenerEmailError());
+    }
 
 
 
@@ -65,7 +109,7 @@ public class CPsHoteles {
 
     public void postTests(){
 
-        //hotelesPage.cerrarBrowser();
+        hotelesPage.cerrarBrowser();
 
     }
 
