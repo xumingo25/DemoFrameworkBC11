@@ -9,12 +9,10 @@ import pages.HomePage;
 import pages.HotelesPage;
 import utils.DataDriven;
 import utils.PropertiesDriven;
-import utils.BaseClass;
 
 import java.util.ArrayList;
-import java.util.Set;
 
-public class CPsHoteles {
+public class CasosDePruebaHoteles {
     private HomePage homePage;
     private HotelesPage hotelesPage;
     private WebDriver driver;
@@ -101,7 +99,10 @@ public class CPsHoteles {
     }
 
     @AfterMethod
+
     public void postTests(){
         hotelesPage.cerrarBrowser();
     }
+
+
 }

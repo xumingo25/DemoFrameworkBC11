@@ -42,6 +42,10 @@ public class HotelesPage extends BaseClass {
     By locatorBusqueda3Habitacion= By.xpath("//div[contains(text(),'Alojamientos en')]");
     By locatorErrorMail = By.xpath("//label[contains(text(),'Introduce un email válido')]");
     By locatorBtnBuscar = By.xpath("(//button[@type='submit'][normalize-space()='Buscar'])");
+    By locatorOptDondeQuieresIr = By.xpath("//li[@id='mui-1-option-0']");
+    By locatorViajeros = By.xpath("(//div/button[@data-autoscroll-target=\"true\"][1])[1]");
+    By locatorErrorReservaMayor1Mes = By.xpath("//span[contains(text(),'Lo sentimos')]");
+    By getLocatorTxtFechaVueltaMayor31Dias = By.xpath("//button[contains(text(),31)]");
 
     //Metodos
     public String getUrl1(){
@@ -100,8 +104,6 @@ public class HotelesPage extends BaseClass {
         click(locatorFVuelta);
         esperarXSegundos(1000);
         click(locatorAumentarViajeros);
-        click(esperarAElementoWeb(locatorOtraHabitacion));
-        click(esperarAElementoWeb(locatorOtraHabitacion));
         esperarXSegundos(1000);
         click(esperarAElementoWeb(locatorBtnBuscarHoteles));
         esperarXSegundos(10000);
@@ -155,10 +157,7 @@ public class HotelesPage extends BaseClass {
         esperarXSegundos(1000);
     }
 
-    By locatorOptDondeQuieresIr = By.xpath("//li[@id='mui-1-option-0']");
-    By locatorViajeros = By.xpath("(//div/button[@data-autoscroll-target=\"true\"][1])[1]");
-    By locatorErrorReservaMayor1Mes = By.xpath("//span[contains(text(),'Lo sentimos')]");
-    By getLocatorTxtFechaVueltaMayor31Dias = By.xpath("//button[contains(text(),31)]");
+
     //Metodos complementarios
     public void completarReservaMayorA1Mes(String destino){
         esperarXSegundos(2000);

@@ -26,12 +26,11 @@ public class CasosDePruebaTrenes {
     private final String url = PropertiesDriven.getProperty("url");
 
     private ArrayList<String> data; // null
-    private ArrayList<String> data2;
+
 
     @BeforeMethod
     public void preparacionTests(){
         data= new ArrayList<String>(); //Array de tamaño 0
-        data2= new ArrayList<String>(); //Segundo Array para evitar conflictos con data
         homePage = new HomePage(driver);
         homePage.conexionBrowser(browser,propertyDriver,urlDriver);
         homePage.cargarPagina(url);

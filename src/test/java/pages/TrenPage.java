@@ -21,8 +21,6 @@ public class TrenPage extends BaseClass {
     By locatorAumentarViajeros = By.xpath("//button[@aria-label='Aumentar el número de adultos']");
     By locatorReducirViajeros = By.xpath("//button[@aria-label='Reducir el número de adultos']");
     By locatorAgregarNinho = By.xpath("//span[contains(text(),'Añadir un niño')]");
-    By locatorAgregarNinhoAdicional = By.xpath("//button[@aria-label='Aumentar el número de niños']");
-    By locatorAgregarBebe11Meses = By.xpath("//li[contains(text(),'Bebé, 0-11 meses')]");
     By locatorAgregarNinho2Anios = By.xpath("//li[contains(text(),'2 años')]");
     By locatorBtnBuscar= By.xpath("//button[contains(text(),'Buscar')]");
     By locatorRBOrigen= By.xpath("//div[@role='listbox']/div/div[2]/button");
@@ -37,7 +35,6 @@ public class TrenPage extends BaseClass {
     By locatorNombre = By.xpath("//input[@name='name']");
     By locatorApellido = By.xpath("//input[@name='surname']");
     By locatorEmail = By.xpath("//input[@name='email' and @id = 'contact-email']");
-    //By locatorCodigoArea = By.xpath("//div[contains(text(),'+34')]");
     By locatorCodigoArea= By.xpath("//div[@class='arrow down']");
     By locatorCodigoAreaArg = By.xpath("//li[@data-country-code='ar']");
     By locatorNumero = By.xpath("//input[@name='phone']");
@@ -45,12 +42,8 @@ public class TrenPage extends BaseClass {
     By locatorDia = By.xpath("//input[@placeholder='DD']");
     By locatorMes = By.xpath("//select[@aria-label='Selecciona el mes']");
     By locatorAnho = By.xpath("//input[@placeholder='AAAA']");
-    //By locatorTipoDoc = By.xpath("//div[@data-test='document-type-input']");
-    //By locatorTipoDoc = By.xpath("//select[@aria-label='groups.1.travellers.1.documentType']");
-    //By locatorPA = By.xpath("//option[@value='PA']");
     By locatorTipoDocPa= By.xpath("//div[@class='traveller-info__documents-wrapper']//descendant-or-self::input");
     By locatorNumeroDoc = By.xpath("//input[@name='groups.1.travellers.1.documentNumber']");
-    //By locatorCheckNoGracias = By.xpath("//div[@class='radio']//child::check");
     By locatorCheckNoGracias = By.xpath("//label[@class='insurance__noThanks-radio-label']//child:: span[@class='check']");
     By locatorPaquetePremium = By.xpath("//b[contains(text(),'Paquete de Servicio Premium')]");
     By locatorBtnSiguiente = By.xpath("//button[contains(text(),'Siguiente')]");
@@ -116,14 +109,6 @@ public class TrenPage extends BaseClass {
         click(locatorAgregarNinho);
         esperarXSegundos(2000);
         click(locatorAgregarNinho2Anios);
-    //    ScrollElementoWeb(locatorAgregarNinhoAdicional);
-    //    for(int i=1;i<=cantidadNinhos;i+=1)
-    //        System.out.println(i);
-    //        click(locatorAgregarNinhoAdicional);
-    //        esperarXSegundos(1000);
-    //        click(locatorAgregarNinho2Anios);
-    //        esperarXSegundos(1000);
-
     }
 
     public void clickBuscar () {
@@ -188,12 +173,6 @@ public class TrenPage extends BaseClass {
         executor.executeScript("arguments[0].click()", element);
 
     }
-    public void seleccionarDroplist(){
-        esperarXSegundos(3000);
-        WebElement element = driver.findElement(By.xpath("//div[@data-test='document-type-input']"));
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].value='PA'", element);
-    }
 
     public void formularioQuienReserva(String nombre, String apellido, String email, String numero, String DD, String anho) {
         agregarTexto(esperarAElementoWeb(locatorNombre),nombre);
@@ -203,7 +182,6 @@ public class TrenPage extends BaseClass {
         esperarXSegundos(1000);
         agregarTexto(esperarAElementoWeb(locatorEmail),email);
         esperarXSegundos(2000);
-        //click(locatorCodigoArea);
         seleccionarCodigoArea();
         esperarXSegundos(2000);
         ScrollElementoWeb(locatorCodigoAreaArg);
@@ -211,7 +189,6 @@ public class TrenPage extends BaseClass {
         agregarTexto(esperarAElementoWeb(locatorNumero),numero);
         esperarXSegundos(1000);
         ScrollElementoWeb(locatorSra);
-        //click(locatorSra);
         seleccionarSra();
         esperarXSegundos(1000);
         agregarTexto(esperarAElementoWeb(locatorDia),DD);
@@ -232,18 +209,11 @@ public class TrenPage extends BaseClass {
         click(locatorBtnSiguiente);
 
     }
-    public void clickJs(String locator){
-        esperarXSegundos(5000);
-        WebElement element = driver.findElement(By.xpath(locator));
-        JavascriptExecutor executor = (JavascriptExecutor) driver;
-        executor.executeScript("arguments[0].click()", element);
-    }
 
     public void formularioMetodoDePago(String titulartarjeta, String nrotarjeta, String mescaducidad, String aniocaducidad, String cvv) {
         esperarXSegundos(2000);
         agregarTexto(esperarAElementoWeb(locatorTxtTitularTarjeta), titulartarjeta);
         esperarXSegundos(2000);
-        //clickJs("//input[@name='creditCard.cardNumber']");
         click(locatorTxtNroTarjeta);
         esperarXSegundos(2000);
         click(locatorTxtNroTarjeta);

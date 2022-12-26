@@ -46,6 +46,9 @@ public class VuelosPage extends BaseClass {
     By locatorDiseniaTuviaje = By.xpath("//span[contains(text(),'Diseña tu viaje añadiendo los servicios que necesites')]");
     By locatorBtnProtegeEquipaje = By.xpath("//div[@class='brb-right-box']");
     By locatorErrorMismoOrigenDestino = By.xpath("//span[contains(text(), 'El destino')]");
+    By locatorPrecioNormal = By.xpath("(//div[contains(text(), 'Precio normal')])[1]");
+    By locatorElegirFlexible = By.xpath("//button[contains(text(),'Elegir Flexible')]");
+    By locatorBtnSiguienteReservaVuelo = By.xpath("//button[contains(text(),'Siguiente')]");
 
     //Localizadores Formulario ¿Quién reserva?
     By locatorTxtNombre = By.xpath("//input[@data-test='input-name']");
@@ -361,8 +364,7 @@ public class VuelosPage extends BaseClass {
         click(locatorBtnReservaAhora);
         esperarXSegundos(7000);
     }
-    By locatorPrecioNormal = By.xpath("(//div[contains(text(), 'Precio normal')])[1]");
-    By locatorElegirFlexible = By.xpath("//button[contains(text(),'Elegir Flexible')]");
+
     public void seleccionReservaVuelo(){
         esperarXSegundos(10000);
         click(locatorPrecioNormal);
@@ -370,7 +372,7 @@ public class VuelosPage extends BaseClass {
         click(locatorElegirFlexible);
         esperarXSegundos(4000);
     }
-    By locatorBtnSiguienteReservaVuelo = By.xpath("//button[contains(text(),'Siguiente')]");
+
     public void resultadoReservaVuelo(){
         esperarXSegundos(2000);
         click(locatorBtnProtegeEquipaje);

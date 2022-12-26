@@ -39,14 +39,6 @@ public class HomePage extends BaseClass {
         click(esperarAElementoWeb(locatorBtnVuelo_Hotel));
     }
 
-    public void irAViajes(){
-        click(esperarAElementoWeb(locatorBtnViajes));
-    }
-
-    public void irATren_Hotel(){
-        click(esperarAElementoWeb(locatorBtnTren_Hotel));
-    }
-
     public void irAHoteles(){
         click(esperarAElementoWeb(locatorBtnHoteles));
     }
