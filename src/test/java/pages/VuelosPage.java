@@ -393,6 +393,7 @@ public class VuelosPage extends BaseClass {
         return texto;
     }
     public String obtenerErrorCompra(){
+        esperarXSegundos(5000);
         WebElement valor = driver.findElement(locatorMsjErrorCompra);
         String texto = valor.getText();
         return texto;
