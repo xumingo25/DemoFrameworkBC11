@@ -4,25 +4,44 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d3cfabf-28c1-4bed-8d3f-839bcf69e6f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaHoteles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaHoteles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HotelPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HotelPage.java" afterDir="false" />
-    </list>
+    <list default="true" id="14b3109a-81bd-4041-8042-dc499ac3a63c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_FF" />
+      </set>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/BC11G3" />
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="BC11G3" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2JRBMIvxDoh4WQ4MHdru68nRw5g" />
+  <component name="ProjectId" id="2IxJlcwthRcs2CzwWUVESlWcZx6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,24 +50,45 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "V:/Tsoft/DemoFrameworkBC11",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "last_opened_file_path": "D:/Universidad"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.CasoDePruebaHoteles.CP005_Buscar_Opciones_Disponibles_Tren_Mas_Hotel">
-    <configuration name="CasoDePruebaHoteles.CP001_Busqueda_De_Alojamiento" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\java\utils" />
+      <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources\data" />
+      <recent name="C:\Users\domingo.saavedra\Downloads\DemoFrameworkBootCamp\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.CasoDePruebaHoteles.CP006_Busqueda_Hoteles_Obtener_Reserva">
+    <configuration name="CPs" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BC11" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CasosDePrueba.*" />
+          <option name="PATTERN" value="tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="CasosDePrueba" />
-      <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaHoteles" />
-      <option name="METHOD_NAME" value="CP001_Busqueda_De_Alojamiento" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CPs" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CPs.CP001_Registro_Fallido_Captcha_en_blanco" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BC11" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.CPs" />
+      <option name="METHOD_NAME" value="CP001_Registro_Fallido_Captcha_en_blanco" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -74,8 +114,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasoDePruebaHoteles.CP003_Elegir_Alojamiento" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
+    <configuration name="CasoDePruebaHoteles.CP004_Busqueda_Hoteles_Cambio_Lugar" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BC11" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="CasosDePrueba.*" />
@@ -84,7 +124,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="CasosDePrueba" />
       <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaHoteles" />
-      <option name="METHOD_NAME" value="CP003_Elegir_Alojamiento" />
+      <option name="METHOD_NAME" value="CP004_Busqueda_Hoteles_Cambio_Lugar" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -92,8 +132,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasoDePruebaHoteles.CP005_Buscar_Opciones_Disponibles_Tren_Mas_Hotel" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="DemoFrameworkBC11" />
+    <configuration name="CasoDePruebaHoteles.CP006_Busqueda_Hoteles_Obtener_Reserva" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BC11" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="CasosDePrueba.*" />
@@ -102,7 +142,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="CasosDePrueba" />
       <option name="MAIN_CLASS_NAME" value="CasosDePrueba.CasoDePruebaHoteles" />
-      <option name="METHOD_NAME" value="CP005_Buscar_Opciones_Disponibles_Tren_Mas_Hotel" />
+      <option name="METHOD_NAME" value="CP006_Busqueda_Hoteles_Obtener_Reserva" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -112,22 +152,100 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CasoDePruebaHoteles.CP005_Buscar_Opciones_Disponibles_Tren_Mas_Hotel" />
-        <item itemvalue="TestNG.CasoDePruebaHoteles.CP003_Elegir_Alojamiento" />
-        <item itemvalue="TestNG.CasoDePruebaHoteles.CP001_Busqueda_De_Alojamiento" />
+        <item itemvalue="TestNG.CasoDePruebaHoteles.CP006_Busqueda_Hoteles_Obtener_Reserva" />
+        <item itemvalue="TestNG.CasoDePruebaHoteles.CP004_Busqueda_Hoteles_Cambio_Lugar" />
         <item itemvalue="TestNG.CasoDePruebaHoteles.CP002_Busqueda_De_Paquetes_Disponibles" />
+        <item itemvalue="TestNG.CPs.CP001_Registro_Fallido_Captcha_en_blanco" />
+        <item itemvalue="TestNG.CPs" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4d3cfabf-28c1-4bed-8d3f-839bcf69e6f8" name="Changes" comment="" />
-      <created>1672030966463</created>
+      <changelist id="34a37b47-89ed-4c1d-8230-18df7a8a273b" name="Changes" comment="" />
+      <created>1671117455375</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1672030966463</updated>
+      <updated>1671117455375</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se sube a repo estructura base del proyecto">
+      <created>1671117726338</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671117726338</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se actualiza pom. Se agrega dependencia de Selenium V 3.141.59">
+      <created>1671118090382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671118090382</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Se crea V1 de clase Base.">
+      <created>1671120045211</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671120045211</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Testeando el push">
+      <created>1671826388337</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671826388337</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se sube a repo estructura base del proyecto" />
+    <MESSAGE value="Se actualiza pom. Se agrega dependencia de Selenium V 3.141.59" />
+    <MESSAGE value="Se crea V1 de clase Base." />
+    <MESSAGE value="Testeando el push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testeando el push" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/BaseClass.java</url>
+          <line>101</line>
+          <properties class="utils.BaseClass">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/DataDriven.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/utils/BaseClass.java</url>
+          <line>97</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/CasosDePrueba/CasoDePruebaVuelos.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

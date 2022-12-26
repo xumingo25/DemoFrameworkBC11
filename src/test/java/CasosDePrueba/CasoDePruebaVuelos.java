@@ -31,7 +31,7 @@ public class CasoDePruebaVuelos {
     }
 
     //lineas NAcho
-   /* @Test
+    @Test
     public void CP002_Ver_Precios_Ida_Y_Vuelta(){
         HomePage.irAVuelos();
         VuelosPage.SeleccionarIdaYVuelta();
@@ -46,7 +46,7 @@ public class CasoDePruebaVuelos {
         VuelosPage.SeleccionarViajero();
         VuelosPage.SeleccionarClase();
         VuelosPage.SeleccionarBuscar();
-    }*/
+    }
 
 
 
@@ -103,8 +103,10 @@ public class CasoDePruebaVuelos {
     @Test
     public void CP001_Ver_Precios_De_Vuelo_Solo_Ida(){
         VuelosPage.SeleccionarVueloIda();
-        VuelosPage.SeleccionarOrigen("Ciudad de México Todos los aeropuertos");
-        VuelosPage.SeleccionarDestino("EZE");
+        VuelosPage.SeleccionarOrigen("MEX");
+        VuelosPage.SeleccionarOrigenOpcion();
+        VuelosPage.SeleccionarDestino("MAD");
+        VuelosPage.SeleccionarDestinoOpcion();
         VuelosPage.SeleccionarFechaDeIda();
         VuelosPage.CambiarAlMesSiguiente();
         VuelosPage.SeleccionarDia();

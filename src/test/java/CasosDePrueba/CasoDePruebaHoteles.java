@@ -11,6 +11,7 @@ import org.testng.annotations.*;
 import Pages.HomePage;
 import Pages.HotelPage;
 import Pages.VuelosPage;
+import utils.DataDriven;
 
 import java.util.ArrayList;
 
@@ -29,8 +30,11 @@ public class CasoDePruebaHoteles {
     private String urlDriver = System.getProperty("user.dir") + "\\src\\test\\resources\\drivers\\chromedriver.exe";
     private String url = "https://www.rumbo.es/";
 
+    private ArrayList<String> data;
+
     @BeforeMethod
     public void preparacionTest() {
+        data = new ArrayList<String>();
         HomePage = new HomePage(driver); //Se crea la page del home
         HomePage.conexionBrowser(browser, propertyDriver, urlDriver); //Se conecta el driver de chrome
         HomePage = new HomePage(HomePage.getDriver());
@@ -56,10 +60,12 @@ public class CasoDePruebaHoteles {
     @Test
     public void CP002_Busqueda_De_Paquetes_Disponibles(){
 
+        data = DataDriven.getData("CP002_Busqueda_De_Paquetes_Disponibles");
+
         HomePage.BtnRechazar();
         HomePage.BtnVueloMasHotel();
-        HotelPage.CompletarVueloMasHoteles("eze", "madrid", 10, 17);
-        Assert.assertEquals(HotelPage.obtenerResultadoCP002(),"Paquete Vuelo + Hotel para Madrid");
+        HotelPage.CompletarVueloMasHoteles(data.get(1), data.get(2), data.get(3), data.get(4));
+        Assert.assertEquals(HotelPage.obtenerResultadoCP002(),data.get(5));
     }
 
     @Test
@@ -74,11 +80,12 @@ public class CasoDePruebaHoteles {
     }
     @Test
     public void CP004_Busqueda_Hoteles_Cambio_Lugar(){
+        data = DataDriven.getData("CP004_Busqueda_Hoteles_Cambio_Lugar");
         HomePage.BtnRechazar();
         HomePage.BtnHoteles();
-        HotelPage.CompletarHoteles("Barcelona", 10, 17);
-        SearchPage.RealizarCambiosBusquedaLugar("Barcelona", "Costa Blanca");
-        Assert.assertEquals(HotelPage.obtenerResultadoCP004(),"Alojamientos en Costa Blanca");
+        HotelPage.CompletarHoteles(data.get(1), data.get(3), data.get(4));
+        SearchPage.RealizarCambiosBusquedaLugar(data.get(1), data.get(5));
+        Assert.assertEquals(HotelPage.obtenerResultadoCP004(),data.get(6));
     }
 
     @Test
@@ -97,9 +104,11 @@ public class CasoDePruebaHoteles {
 
     @Test
     public void CP006_Busqueda_Hoteles_Obtener_Reserva(){
+        data = DataDriven.getData("CP006_Busqueda_Hoteles_Obtener_Reserva");
+
         HomePage.BtnRechazar();
         HomePage.BtnHoteles();
-        HotelPage.CompletarHoteles("Barcelona", 10, 17);
+        HotelPage.CompletarHoteles(data.get(1), data.get(3), data.get(4));
         SearchPage.ElegirPrimeraOpcionFoto();
 
 //El driver tiene que cambiar de TAB
@@ -109,9 +118,9 @@ public class CasoDePruebaHoteles {
 
 
         SearchPage.ElegirHabitacionYelegirPrimerOpcion();
-        FormPage.RellenarFormulario("Franco","Zarate","ndeah@gmail.com","3804222222");
+        FormPage.RellenarFormulario(data.get(5),data.get(6),data.get(7),data.get(8));
 
-        Assert.assertEquals(FormPage.obtenerResultadoCP006(),"Realiza el acceso antes de continuar.");
+        Assert.assertEquals(FormPage.obtenerResultadoCP006(),data.get(9));
     }
 
 }

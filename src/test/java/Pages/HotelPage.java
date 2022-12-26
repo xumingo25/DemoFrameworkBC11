@@ -28,7 +28,7 @@ public class HotelPage extends BaseClass {
 
 
 
-    public void CompletarHoteles (String Lugar, int Fecha1, int Fecha2){
+    public void CompletarHoteles (String Lugar, String Fecha1, String Fecha2){
 
 //Elegir el lugar de alojamiento
         esperarXSegundos(1000);
@@ -83,7 +83,7 @@ public class HotelPage extends BaseClass {
     By locatorBtnSeleccionAloj=By.xpath("//a[@class='sc-fEXmlR hMqBms']");
 
 
-    public void CompletarVueloMasHoteles (String LugarOrigen, String LugarDestino, int FechaIda, int FechaVuelta){
+    public void CompletarVueloMasHoteles (String LugarOrigen, String LugarDestino, String FechaIda, String FechaVuelta){
 
 //Elegimos la clase
         click(esperarAElementoWeb(locatorClase));

@@ -80,7 +80,7 @@ public class BaseClass {
     //Tiempos de espera
 
     //Espera por X segundos
-    public void esperarXSegundos(int milisegundos){
+    public static void esperarXSegundos(int milisegundos){
         try{
             Thread.sleep(milisegundos);
         }catch (Exception ex){
